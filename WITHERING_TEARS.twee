@@ -429,6 +429,11 @@ As I approach the gate of the garden, a large and imposing arch, I can't help bu
 
 
 :: Intro3 {"position":"1125,1350","size":"100,100"}
+</style>
+<img
+src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Intro3.png?raw=true">
+</div>
+
 While I look around, I pull out my notebook, the silent assistant of death, to remind myself of my mission.
 
 [[Continue.->Intro4]]
@@ -441,6 +446,11 @@ I shake my head. Must have been the restless night gnawing at my heels. I walk b
 
 
 :: Intro4 {"position":"1275,1350","size":"100,100"}
+</style>
+<img
+src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Intro3.png?raw=true">
+</div>
+
 The worn pages told me everything that I needed to know. What should I read first?
 
 [[The fading target's photo.->Photo1]]
@@ -570,7 +580,10 @@ I keep my hands in my pockets and just let the boat go through it's little journ
 
 
 :: Location1 {"position":"1500,1425","size":"100,100"}
-(IMAGE HERE?)
+</style>
+<img
+src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Location1.png?raw=true">
+</div>
 
 "Withering Tears" garden... Built in 1850 by some rich snob. Now an abandoned, overgrown mess. A perfect place for a murder.
 
@@ -663,7 +676,10 @@ As I open the doll, smaller and smaller dolls come out, a little army of porcela
 
 
 :: Photo1 {"position":"1500,1275","size":"100,100"}
-(IMAGE HERE?)
+</style>
+<img
+src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Photo1.png?raw=true">
+</div>
 
 Ineska Yazov. A sight for sore eyes, no doubt...
 
@@ -903,7 +919,7 @@ I take my time, slowly making my way down the staircase. The ground is too muddy
 
 :: have a look around {"position":"2450,925","size":"100,100"}
 Moving towards the edge of the cliff, I can see a cross-shaped fountain below. 
-As I plant my feet on the edge of the cliff, I can see the fountain more clearly. Looking down, I notice something on the rocky surface. Looks like a piece of paper.
+As I plant my feet on the edge of the cliff, I can see the fountain more clearly. Looking down, I notice something tied to a small flower. Looks like a piece of paper.
 
 [[I carefully pickup the note and inspect it.->Look around]]
 [[Ignore it and keep moving.->keep moving carefully]]
@@ -939,3 +955,36 @@ Well, I did fall quite a bit, I shouldn't be TOO far from the entrance. I resume
 Something about this staircase feels off, my gut is sending all kinds of alarms to me. I dust myself off and begin making my way up. It takes a bit, not wanting to bump my back into a damn tree again but I'm soon back at the top.
 
 [[I take a breather and keep walking.->keep moving carefully]]
+
+
+:: StoryScript [script]
+var audio = document.createElement('audio');
+audio.src = 'assets/music/introMusic.mpeg';
+audio.loop = true;
+audio.volume = 0.3;
+audio.play();
+
+:: StoryStylesheet [stylesheet]
+img {
+	display: block;
+  	margin: auto;
+  	max-width: 70%;
+  	border: 5px solid black;
+}
+
+tw-story {
+ background-image:url("assets/images/bg4.jpeg");
+ background-size:cover;
+}
+
+tw-link {
+  color: #332f99;
+}
+
+tw-link:hover, .enchantment-link:hover {
+	color: #504af7;
+}
+
+tw-passage {
+  color:black;
+}
