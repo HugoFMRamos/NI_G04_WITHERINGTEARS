@@ -1,0 +1,941 @@
+:: StoryTitle
+WITHERING_TEARS
+
+
+:: StoryData
+{
+  "ifid": "AC418CF3-B437-4637-9B60-864CAEF621E1",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "TitleScreen",
+  "tag-colors": {
+    "ENDING": "red",
+    "ONEWAY": "orange",
+    "INFO": "yellow",
+    "SECRET": "purple",
+    "Need-Programming": "blue",
+    "Good-deed": "green"
+  },
+  "zoom": 1
+}
+
+
+:: \ Run6 {"position":"475,1650","size":"100,100"}
+I feel weightless, my body in constant freefall, as I lose all sense of direction. The world is now a mess of indescribable colors, an infinite abyss ready to swallow me whole. And then...
+
+[[...everything went dark, and nonexistence embraced me.->RunENDING]]
+
+
+:: Aim {"position":"3550,175","size":"100,100"}
+[[Yet my finger froze on the trigger.->DontShoot1]]
+
+
+
+(align:"<==")+(box:"====XXXXX=")|text>[[[I was "Switchblade" and I never missed.->Kill1]]]
+
+(live: 3s)[
+	(replace: ?text)[]
+	(stop:)
+]
+
+
+:: BADEnding [ENDING] {"position":"4525,1475","size":"100,100"}
+(align:"=><=")[THE END]
+
+(align:"=><=")[“Most people are not just comfortable in their ignorance, but hostile to anyone who points it out.” -  Plato]
+
+(align:"=><=")[[[Wake up, once more.->TitleScreen]]]
+
+
+:: BADEnding1 {"position":"4525,1625","size":"100,100"}
+An old, worn books finds itself in my grip. The sole reason that this world could have gone to shit. I set the gun down on the grass and slowly open the book.
+
+[[As I look through the pages, I feel... off.->BADEnding2]]
+
+
+:: BADEnding2 {"position":"4675,1625","size":"100,100"}
+Torn pages, photos, poems... the more I read the more depressed I get. My hands begin to shake as my mind is overwhelmed with a rush of memories. A gasp comes off of me as my eyes widen.
+
+[[The book falls off my hands.->BADEnding3]]
+
+
+:: BADEnding3 {"position":"4825,1625","size":"100,100"}
+I freeze, my fists clenching so hard my knuckles turn white. N-No it can't be... Did I, do that? For a book? The tears begin to fall... and the gun seems oddly warm, like a friend.
+
+[[My hand reaches for it.->BADEnding4]]
+
+
+:: BADEnding4 {"position":"4825,1475","size":"100,100"}
+I look at it for a long second under blurry eyes. Every minute detail to memory. All the scratches, the little imperfections... the death it carried in my hands. Now... it would bring mine.
+
+[[I slowly brought the barrel to my temple.->BADEnding5]]
+
+
+:: BADEnding5 {"position":"4675,1475","size":"100,100"}
+As I feel the cold steel on the side of my head, I begin to reflect on what I had done... I was nothing more than a monster turned puppet. All my life I had been running away, killing just to feel something... and now? The weight was just too heavy... and this? This was my release.
+
+[[I close my eyes, take a deep breath and pull the tri-->BADEnding]]
+
+
+:: Back1 {"position":"2475,625","size":"100,100"}
+As I make my way back, I return to the stairs that wind down into the forest. I decide to turn around and see that the path was gone. Strange... guess I can't go back there now. (set: $blockGroveTree to true)
+
+[[Go down the stairs.->Stairs1]]
+[[I return to the entrance of the forest to retrace my steps.->Forest1]]
+
+
+:: BenchNoBread {"position":"2475,1875","size":"100,100"}
+It's a beautiful place, a total contrast of what was going to happen here. The ducks swam and sat lazily on the shore.
+
+[[Get up and keep investigating the lake->Lake beginning]]
+
+
+:: Bread1 [ONEWAY] {"position":"2225,2400","size":"100,100"}
+I tear the bread into crumbs and begin throwing it to the ducks. Some begin to swim to shore and start picking at it. An oddly warm feeling went through my chest as I saw them eat.(set:$gotBread to false)
+
+[[I look at a particular white duck.->Duck1]]
+[[Guess I did my good deed for the day.->Lake1]]
+
+
+:: Cautiously move to the fountain [Good-deed] {"position":"3025,2000","size":"100,100"}
+As I cautiously move toward the fountain, I notice the sun already beginning to set... The cold fingers of the night slowly coming up from the horizon. I don't have much time. I quickly scout the area, going towards some green bushes.
+
+[[I look around the bushes.->Move up behind the bushes]]
+
+
+:: Check the canal {"position":"1225,2650","size":"100,100"}
+I walk towards the small canal. Calling it a canal is an overstatement. It is more of a sad little crack in the stone than anything. It seems to lead out of the garden. At least the water is clear.
+
+(if:$foundBoatClue is true)[[[Turn back->Tree1]]](else:)[[[I follow the canal upstream.->Take a closer look]]]
+
+
+:: Check the piece of paper [Need-Programming] {"position":"1275,1800","size":"100,100"}
+"This lake, this tree… echoes of joy, scattered like leaves on the wind. And now? Nothing but a lost soul, wrapped in eternal sorrow."
+
+-CLUE FOUND-
+
+[[Go anywhere but here.->Garden2]]
+(set: $clueCounter to it + 1)
+
+
+:: Check the small fountain {"position":"1525,2650","size":"100,100"}
+The fountain was a peaceful place, flora scattered everywhere. I squat down a look at the waters for a little bit. Taking a deep breath, I stand back up... Nothing to see here.
+
+[[I turn around to leave.->Turn around and leave]]
+
+
+:: Check the tunnel {"position":"1900,1675","size":"100,100"}
+One step after another I approach the tunnel. The iron bars had seen better days... they were rusty and old, just like the rest of this place. Inside was damp and a pungent scent of earth and sewage invaded my nostrils.
+
+[[Maybe she's in there?->Get closer and look into the tunnel]]
+[[Nah... I don't think so.->Nah... I don't think so]]
+
+
+:: Choose to not shoot, but shoots anyway {"position":"3800,1500","size":"100,100"}
+Seriously? You think I am just going to stand here and play second fiddle? No, you must crazy or something. This time I chose.
+
+[[I let the gun ring out in the garden.->Shoot her and take the book]]
+
+
+:: Close my eyes and focus {"position":"4075,1800","size":"100,100"}
+I feel a flash of memories run behind my eyes as I feel myself leaving Plato's cave. I blink a few times and look at my hands and then at my surroundings. I've... been here before. I look back at her and speak, quietly.
+
+[["Y-Yeah..."->Look at Inês]]
+
+
+:: Cock the gun and take aim [Need-Programming] {"position":"3325,1675","size":"100,100"}
+Unholstering the gun, I see her eyes falling on me, widening, her hand quickly reaching for her coat. Shit, it's now or never.
+
+[[I quickly, take aim and fire.->Shoot her and take the book]]
+(if:$clueCounter >= 4)[[I don't shoot her.->Don't shoot her]]
+(else:)[[I don't shoot her.->Choose to not shoot, but shoots anyway]]
+
+
+:: Don't shoot her {"position":"3625,1800","size":"100,100"}
+Before I realize I was too slow, she takes out an old, worn book. Is that the book I came for? The one my contractor told me to tear off her hands? W-wait... she's still smili- No. Focus on the damn mission Peter!
+
+[["B-But... I can't."->Lower the gun]]
+[["I'm s-sorry."->Shoot her and take the book]]
+
+
+:: DontShoot1 [Good-deed] {"position":"3400,400","size":"100,100"}
+Her icy grey eyes fall on mine for a split second and hesitation seemed to take over. My hand doesn't budge even an inch, as if locked in place. Now, she was already long gone. This never happened to me. I never... hesitated. Something about her seems... off.
+
+[[I sigh and holster the cold steel, before leaving the small grove.->Back1]]
+
+
+:: Draw the gun and move to the fountain {"position":"3025,1675","size":"100,100"}
+Damn it, the sun is setting, I'm almost out of time. I need to be careful, if it's the target, she could be armed.
+
+[[Take cover behind some bushes and scout the fountain]]
+
+
+:: Drink some water from the lake {"position":"2475,2150","size":"100,100"}
+I tear my gloves off and cup my hands into the water. As the cool water hit my lower lip, I take a sip. Feeling refreshed, I shake my hands and put the gloves back on. Before I can stand up, I notice a disturbance in the water. Are those bubbles?
+
+[[I get a closer look.->Look closer]]
+[[Leave->Lake beginning]]
+
+
+:: Duck1 {"position":"2350,2400","size":"100,100"}
+It looked completely different from all the others, it's feathers milky white and a bright orange beak. It slowly comes out of the lake, as it let's out a quack and prunes its' plumage.
+
+[[I keep looking at the duck.->Duck2]]
+
+
+:: Duck2 {"position":"2475,2400","size":"100,100"}
+For some reason, I just keep looking at the duck. It now plops down on the ground and shakes its' wings as it gets nice and comfortable on the green grass.
+
+[[The duck slowly moves its' head.->Duck3]]
+
+
+:: Duck3 {"position":"2600,2400","size":"100,100"}
+The duck looks back at me. It's eyes seem to stare right through my very soul. I can't help but approach the duck, as if it was calling for my name.
+
+[[One step, another, then another.->Duck4]]
+
+
+:: Duck4 {"position":"2600,2525","size":"100,100"}
+When I get close to the duck, I kneel down and begin petting it's head. Its' feathers feel soft to the touch. As I'm entracted by the beauty of this animal, I feel my head starting to swim.
+
+[[Then, I feel my body morph.->Duck5]]
+
+
+:: Duck5 {"position":"2475,2525","size":"100,100"}
+I feel the world growing bigger... me becoming smaller. My clothes swallow me as I keep looking at the duck. I feel my muscles and bones stretch and deform, my skin growing quills until...
+
+[[Quack.->Duck6]]
+
+
+:: Duck6 {"position":"2350,2525","size":"100,100"}
+Quack, quack, quack...
+
+[[QUACK!->DuckENDING]]
+
+
+:: DuckENDING [ENDING SECRET] {"position":"2225,2525","size":"100,100"}
+(align:"=><=")[THE END]
+
+(align:"=><=")["Don't quack like a duck, soar like an eagle!" -  Ken Blanchard]
+
+(align:"=><=")[[[Wake up, once more.->TitleScreen]]]
+
+
+:: Fail1 {"position":"3250,300","size":"100,100"}
+As I walk back to the outer edge of the grove, I see a silhouette of a woman out of the corner of my eye. She vanishes once I turn to look. ''Damn it!'' It was her! I let her escape... I'm such a fool.
+
+[[I pinch the bridge of nose and get out of there.->Back1]]
+
+
+:: Forest1 {"position":"2300,625","size":"100,100"}
+(if:visits > 1)[Once again, I'm back at the entrance of the woodland. Still uncaring, unfeeling... unknowing of what is going to happen between it's greenery. Where should I go?]
+(else:)[At the entrance of the dense forest, I hear all kinds of things. Birds chirping, wind whistling through the foliage and the rustling of leaves. The path branches into different directions.]
+
+[[Take the left.->ForestLeft1]]
+[[Keep going forward.->ForestForward1]]
+[[Take the right.->ForestRight1]]
+[[Go back.->Garden2]]
+
+
+:: Forest2 {"position":"2650,350","size":"100,100"}
+Although he doesn't know why, you feel the need to push on into forest. 
+
+Despite the thickening woodland, something in me is telling me to keep going. Morbid curiosity getting the best of me it seems...
+
+[[I push my doubts aside and keep pushing.->Forest3]]
+[[I shake my head and go back.->ForestRight1]]
+
+
+:: Forest3 {"position":"2800,350","size":"100,100"}
+The vegetation begins to tug and scratch at my suit as I keep going further inside this cage of wood and bark. Morbid curiosity becomes unease. There's something in here... I feel it in my veins. Suddenly I find myself in a small grove filled with minute white flowers. In the middle stands a tall, thick tree. Despite the beauty of the place...
+
+(align:"=><=")[*Something doesn't feel right.*]
+
+[[I cautiously approach the tree->GroveTree1]]
+[[Nah, this place feels off, I'm leaving.(set: $blockGroveTree to true)->ForestRight1]]
+
+
+:: ForestForward1 {"position":"2300,475","size":"100,100"}
+(if:visits > 1)[I come back down from the climbing path. My target is still very well at large and I won't get my cut if I stand around acting like a tourist on a sweet summer day...]
+(else:)[As I keep moving deeper into the forest, the terrain begins to grow upward. After some walking, I find myself near a tree, an old rotting bench in front of it. Getting closer to the bench shows a path on the right.]
+
+[[I sit on the bench.->Sit1]]
+[[Follow the path on the right.->ForestRight1]]
+[[Walk back to the entrance.->Forest1]]
+
+
+:: ForestLeft1 {"position":"2150,625","size":"100,100"}
+After a short walk, I find myself at the entrance of a small grove. In the middle of the copse there are two tree stumps. A cozy place...
+
+(if:(history: where its name contains "investigate")'s length is 0)[[[I walk to the tree stumps and take a closer look->investigate]]]
+[[I leave the small grove.->Forest1]]
+
+
+:: ForestRight1 {"position":"2475,350","size":"100,100"}
+(if:(history: where its name contains "Back1")'s length >= 1)[I go through the path on the right. Since the tight path towards that oddly unsettling grove is... gone, I have no other choice but to take the staircase.](else-if: $blockGroveTree)[Once I return back to the staircase, the path behind me had seemingly vanished, now just a wall of trees and bushes...That's odd.](else:)[The forest slowly creeps up on me, blocking the sky in a cocoon of leaves and crooked branches. The path continues but the botanical walls are closing quickly around me like a natural coffin. Right next to me stands a set of steps that leads to the unknown.]
+
+[[Turn heel.->ForestForward1]] 
+[[Go down the winding staircase.->Stairs1]]
+(if: not $blockGroveTree)[[[I push deeper into the forest.->Forest2]]]
+
+
+:: GET OUT NOW! {"position":"1775,1925","size":"100,100"}
+I ain't got time to let the garden play tricks on me. I got a target to take care of. I turn away from the tunnel and just walk off. Where should I go?
+
+[[Go to the big tree instead.->Tree1]]
+[[Go to the lake.->Lake1]]
+
+
+:: GET THE HELL OUT {"position":"1525,1800","size":"100,100"}
+Just as I'm about to haul ass, the creature's hand opens, revealling a letter. I scratch my head and my brow furrows. This place is more insane than Alice in Wonderland...
+
+[[I reach my hand out and take it...->Take the letter]]
+
+
+:: Garden1 {"position":"1775,1425","size":"100,100"}
+As I step inside and through the arch, I feel the weight on my shoulders lift. The cold steel in my overcoat doesn't feel as heavy anymore. This is just another job, just another loan of blood money.
+
+[[Continue.->Garden2]]
+
+
+:: Garden2 [Need-Programming] {"position":"1900,1425","size":"100,100"}
+(if:visits > 1)[I come back to the center point of the garden. I haven't found her... yet. Where should I go next?]
+(else:)[Trekking through the dense foliage and the muddy soil, I find myself at a crossroads. Which path should I go?]
+
+[[The massive tree looming over me.->Tree1]]
+[[The crystal clear lake.->Lake1]]
+[[The tight, interwoven paths of the forest.->Forest1]]
+
+
+:: Gaze into her beautiful eyes {"position":"3925,1800","size":"100,100"}
+The gun falls off my hands with a soft thud as it landed on the grass. Her soft voice breaks the tense silence between us- "Pedro... Is that, finally, you? Do you remember me?" -As I hear her words, my brain feels like it wants to crawl out of my skull.
+
+[[I close my eyes and take a deep breath.->Close my eyes and focus]]
+
+
+:: Gaze into her eyes [Good-deed] {"position":"2825,2150","size":"100,100"}
+And just like that, she had dissapeared. I blinked a few times and shook my head. Is my brain playing tricks or am I getting paranoid?
+
+[[I stand back up.->Lake beginning]] 
+[[I walk to the bench to unwind.->BenchNoBread]]
+
+
+:: Get closer and look into the tunnel {"position":"1900,1800","size":"100,100"}
+I don't know what kind of mad individual would put themselves inside a place like this, but some are quite... desperate. I wish I just had a something brigther than a Zippo.
+
+[[Peer into the darkness.->Peer into the darkness]]
+
+
+:: Get up and look around {"position":"2300,1150","size":"100,100"}
+I let out a pained grunt as I get myself back on my feet, a dull ache on my arm and back already gnawing at me. Looking around, everything looks... //different//. If I walk back up I should be able to go back. But there is still a lot to go down...
+
+[[I push that thought aside and go back up.->try to walk back up]]
+[[I take a risk and keep walking down.->risk walking down]]
+
+
+:: Go to the lake {"position":"2475,2000","size":"100,100"}
+This lake... the water is so clear... so pure. I can see a bench over there.
+
+[[Go sit down on the bench->BenchNoBread]]
+[[Drink some water from the lake]]
+
+
+:: Go to the left {"position":"2825,775","size":"100,100"}
+(Recanto ines e pedro) 
+
+Going left, I find myself in a little nook in the middle of the forest. There stood an old bench, secluded from the rest of the world... rotting away on it's own.
+
+[[I have a look around.->Have a look around]]
+
+
+:: Go to the right {"position":"1900,1550","size":"100,100"}
+As I take a right I find myself back at the entrance, this abandoned world seemingly taken me in circles.(if:(history: where its name contains "Check the tunnel")'s length is 0)[As I look to my side I see a dark barred tunnel.] (else:)[As I look to my side I see ''the'' dark barred tunnel... ''again.'' I don't think I want to go back there.]
+
+[[Go to the large tree.->Tree1]]
+(if:(history: where its name contains "Check the piece of paper")'s length is 0)[[[Investigate the tunnel.->Check the tunnel]]]
+
+
+:: Go to the woman [Need-Programming] {"position":"3925,2000","size":"100,100"}
+Approaching her, a calm washes over me. My brain hurts and throbs against my skull. I feel almost... compelled to go to her. To be with her.
+
+(if:$clueCounter >= 4)[[[I gaze into her beautiful eyes.->Gaze into her beautiful eyes]]](else:)[[[I gaze into her beautiful eyes.->Choose to not shoot, but shoots anyway]]]
+[[No, it's a trap! I have to kill her before it's too late!->Shoot her and take the book]]
+
+
+:: GoodEnd1 {"position":"4375,1800","size":"100,100"}
+The sky desintegrates, the trees burn away into wisps, the ground beneath us tears by the seams. - "It's been so long Pedro... I missed you." - Inês said, a tear slowly falling off her palid, beautiful face.
+
+[[Continue.->GoodEnd2]]
+
+
+:: GoodEnd2 {"position":"4525,1800","size":"100,100"}
+My face unclenched, finally knowing that this torture was ending. The world around us was desintegrating apart but... we would finally be together. Soon, once the entire garden was nothing but dust in an infinite wind, our bodies were dissolving too. And in that moment... in our last moment, I made our memory everlasting.
+
+[[I closed in, and our lips met... for the last time.->Kiss her]]
+
+
+:: GroveTree1 [ONEWAY] {"position":"2950,300","size":"100,100"}
+As I slowly make my way towards the tree, a sound overpowers the silence. My senses kick in and my body tenses up. It came from behind the tree.
+
+[[My hand instinctively drew the gun from my holster.->Gun1]]
+[[I take a deep breath and try to stay cool.->NoGun1]]
+[[Maybe I should just... leave.->Leave]]
+
+
+:: Gun1 {"position":"3100,175","size":"100,100"}
+Something was wrong in here, I knew it. I pull out my trusty 1911 with practiced ease and precision, like I was a dollar store angel of death, ready to get my hands dirty.
+
+[[I take a few steps forward, always steady->GunForward1]]
+[[I take a few steps back, slowly leaving.->Leave]]
+
+
+:: Gun2 {"position":"3400,175","size":"100,100"}
+As I walk back to the outer edge of the grove, I see a silhouette of a woman out of the corner of my eye. It was her, ''Ineska'', the target. I quickly turn and see her trying to make a run for it. It was too late for her...
+
+[[...my gun was already trained on her.->Aim]]
+
+
+:: GunForward1 [ONEWAY] {"position":"3250,175","size":"100,100"}
+Once I turn to look behind the tree there was... no one? Really? I could have sworn I heard something. I let out a frustrated groan. My mind is playing tricks...
+
+[[I sigh and hoslter the gun, turning to leave.->Fail1]]
+[[I turn to leave, with the gun in hand... just in case.->Gun2]]
+
+
+:: Have a look around {"position":"2950,775","size":"100,100"}
+As I look around I can't help but have an eerie sense of dejá vu. This feels familiar, a small dreamscape in a hellhole. As my gaze goes downcast, I notice something under the bench.
+
+(if:$foundDollClue is false)[[[I get on my knees and look under.->Look under the bench]]]
+[[Nah, waste of time...->Take the left path]]
+
+
+:: Inspect the hole {"position":"3250,625","size":"100,100"}
+I clench my leather glove and press it into the hole. As it swallowed my forearm, I notice that it was quite hollow inside. I fell my hand touch something that felt like paper. Grabbing and pulling it out I see that it's a worn page from a diary.
+
+[[I unroll the paper and read it.->Read it]]
+
+
+:: Intro1 {"position":"800,1350","size":"100,100"}
+I'm walking down a path on the street... and at the end of that street, is a garden. Inside that garden, there is a woman. I am here to kill her.
+
+[[Continue.->Intro2]]
+
+
+:: Intro2 {"position":"975,1350","size":"100,100"}
+As I approach the gate of the garden, a large and imposing arch, I can't help but have a gnawing feeling of deja vú... as if I have been here before.
+
+[[Continue.->Intro3]]
+[[I turn heel and get out of there.->Run1]]
+
+
+:: Intro3 {"position":"1125,1350","size":"100,100"}
+While I look around, I pull out my notebook, the silent assistant of death, to remind myself of my mission.
+
+[[Continue.->Intro4]]
+
+
+:: Intro3.1 {"position":"1125,1650","size":"100,100"}
+I shake my head. Must have been the restless night gnawing at my heels. I walk back to the gate.
+
+[[Continue.->Intro3]]
+
+
+:: Intro4 {"position":"1275,1350","size":"100,100"}
+The worn pages told me everything that I needed to know. What should I read first?
+
+[[The fading target's photo.->Photo1]]
+[[The quickly written down notes of this place.->Location1]]
+[[No time for reading, time to act.->Garden1]]
+
+
+:: It felt good. {"position":"2875,1300","size":"100,100"}
+My mind fractured on itself like broken glass and suddenly, the grimace on my face faded, a peaceful mania took over my body... It feels good, the world revolving itself like a wicked version of an ouroborus. Everything is alright here and a wave of calmness envelops me like a warm blanket. I'm safe, I'm happy...
+
+[[Must... keep... going... down.]]
+
+
+:: Keep observing {"position":"3325,2000","size":"100,100"}
+As I keep looking, her eyes land on me. I freeze for a second, my hand clenching but... the corners of her lips run up to form a small smile. Despite me thinking that she might be... dense, something was urging me to walk towards her.
+
+[[Go to the woman]]
+
+
+:: Keep on walking down [ENDING SECRET] {"position":"3125,1300","size":"100,100"}
+(align:"=><=")[THE END]
+
+(align:"=><=")["Delay is the deadliest form of denial." -  C. Northcote Parkinson]
+
+(align:"=><=")[[[Wake up, once more.->TitleScreen]]]
+
+
+:: Keep on walking down1 {"position":"2750,1300","size":"100,100"}
+My steps became just like everything else in this staircase... a mirror, a rythym of thuds, an insane cacophonous orchestra as I keep going down this loop of lunacy. But despite this madness...
+
+[[It felt good.]]
+
+
+:: Keep walking down {"position":"2625,1300","size":"100,100"}
+My descent down the staircase mirrored my descent into madness. My breathing quickened, my heart was beating like a war drum and my mind was frying itself into a crisp.
+
+[[I must keep walking... down.->Keep on walking down1]]
+
+
+:: Kill1 {"position":"3700,175","size":"100,100"}
+I pull the trigger and the pistol roars to life, disturbing the quiet of the woodlands. The bullet easily finds its' mark as it pierces through Ineska's chest. Her body goes limp and collapses into the bed of white flowers, the book hiding all of the cofidencial information falling along with her. She looks at me with shaky, teary eyes, her voice a weak whimper.
+
+"Peter... W-why..."
+
+I lower the gun. The life on her eyes was sucked dry.
+
+[[My job was done.->Kill2]]
+
+
+:: Kill2 {"position":"3825,175","size":"100,100"}
+I holster the gun and walk to the body, the blood already staining the fur of her coat and the flora with a deep crimson. Kneeling down, I tear the book away from her palid hands.
+
+[[I stand up, and begin to walk away from that grove.->Kill3]]
+
+
+:: Kill3 {"position":"3950,175","size":"100,100"}
+As I walk, curiosity gnaws at my heels and I open the book. The moment I open the cover, I feel a sharp pain in my lungs. The book falls off my hands as I grip my chest.
+
+[[I begin to cough violently.->Kill4]]
+
+
+:: Kill4 {"position":"3950,50","size":"100,100"}
+My lungs are burning, my body is a raging inferno, almost as if I had inhaled hot coals. My coughing grows more forceful as I fall to my knees, feeling the metallic tang of blood seeping out of my mouth.
+
+[[My strength is leeched away from me.->Kill5]]
+
+
+:: Kill5 {"position":"3825,50","size":"100,100"}
+The pain in my chest is agonizing, as if someone was piercing my skin with a hot needle a thousand times a second. I lose all strength and I collapse on the dirt.
+
+[[My body feels limp... I can't move.->Kill6]]
+
+
+:: Kill6 {"position":"3700,50","size":"100,100"}
+This was it... After all these years of being a killer, karma finally caught up to me. This was my penance, a slow... agonizing death. Hell was burning me from the inside out...
+
+[[...and soon enough, it took me there.->KillENDING]]
+
+
+:: KillENDING [ENDING] {"position":"3575,50","size":"100,100"}
+(align:"=><=")[THE END]
+
+(align:"=><=")["It is not death that a man should fear, but he should fear never beginning to live." -  Marcus Aurelius]
+
+(align:"=><=")[[[Wake up, once more.->TitleScreen]]]
+
+
+:: Kiss her [True-Ending ENDING] {"position":"4675,1800","size":"100,100"}
+(align:"=><=")[THE END]
+
+(align:"=><=")["The struggle itself towards the heights is enough to fill a man's heart. One must imagine Sisyphus happy." -  Albert Camus]
+
+(align:"=><=")[[[You may finally rest, Pedro.->TitleScreen]]]
+
+
+:: Lake beginning {"position":"2825,1900","size":"100,100"}
+I bring my head up, taking a look around the still lake until something catches the corner of my eye... some sort of, movement near the fountain.
+
+[[I draw the gun and head towards the fountain.->Draw the gun and move to the fountain]]
+[[I move towards the fountain.->Cautiously move to the fountain]]
+
+
+:: Lake1 {"position":"2225,2150","size":"100,100"}
+The lake, It's a beautiful place, a total contrast of what was going to happen here. The water looks so pure and calm and ducks are swimming and sitting lazily on the shore. There is a large tree-stump I could sit down and take a breather on.
+
+(if:$gotBread)[[[Give some bread to the ducks->Bread1]]]
+[[Drink some water from the lake.->Drink some water from the lake]] 
+[[Sit down on the tree stump.->BenchNoBread]]
+
+
+:: Leave {"position":"3100,300","size":"100,100"}
+I shake my head and let out a frustrated sigh. I don't have time for shenanigans... I need to go kill the target, now.
+
+[[I turn heel and leave.->Back1]]
+
+
+:: Leave the area {"position":"2950,625","size":"100,100"}
+Why the hell would I stick my hand in a hole? That's just stupid... she's a person, not a rat. I don't have time for games!
+
+[[Go back the way I came from.->Back1]]
+
+
+:: Let it travel down the canal {"position":"1375,2900","size":"100,100"}
+I keep my hands in my pockets and just let the boat go through it's little journey. Hope it reaches the sewer...
+
+[[I walk back towards the big tree.->Tree1]]
+
+
+:: Location1 {"position":"1500,1425","size":"100,100"}
+(IMAGE HERE?)
+
+"Withering Tears" garden... Built in 1850 by some rich snob. Now an abandoned, overgrown mess. A perfect place for a murder.
+
+[[The fading target's photo.->Photo1]]
+[[Enough reading, time to act.->Garden1]]
+
+
+:: Look around [Need-Programming] {"position":"2450,1075","size":"100,100"}
+"He was good to me—not to all, but to me, he was solace. Yet I suffer for his sins, wandering still, lost and yearning for peace."
+
+-CLUE FOUND-
+
+[[Turn heel and keep walking.->keep moving carefully]]
+(set:$clueCounter to it + 1)
+(set:$foundCliffClue to true)
+
+
+:: Look at Inês {"position":"4225,1800","size":"100,100"}
+As the two of us get closer and huddle together, the world slowly begins to tear itself apart. We had died... a long time ago, chained by the consequences of my actions, forever trapped in a loop of death. Until now
+
+[[Continue.->GoodEnd1]]
+
+
+:: Look closer {"position":"2475,2275","size":"100,100"}
+-ADD JUMPSCARE WITH A TWISTED FACE UNDER THE WATER-
+
+Boo!
+
+[[Oh shit!]]
+
+
+:: Look under the bench {"position":"2950,900","size":"100,100"}
+As I look under the bench, I see a Matryoshka doll, neatly placed under the shade of the bench. Picking it up, I see the wear and tear on it and feel it's weight...
+
+[[Start opening the doll to check the inside.->Open the doll]]
+[[Place the doll back and take a left.->Take the left path]]
+
+
+:: Lower the gun [ONEWAY] {"position":"3775,1800","size":"100,100"}
+I just... can't. I've killed, ''hundreds'', my hands drenched in others blood, sometimes mine and yet... this woman. This damn woman makes me feel... wrong about killing. W-Why? Who the hell is she?
+
+[[I gaze into her beautiful eyes.->Gaze into her beautiful eyes]]
+
+
+:: Move up behind the bushes {"position":"3175,2000","size":"100,100"}
+Looking over the bush, I see her... just sitting by the fountain, her features too at ease for a woman who is being hunted down by an American. Why is she just out in the open?
+
+[[Unholster the gun and aim at her.->Cock the gun and take aim]]
+[[Keep observing.->Keep observing]]
+
+
+:: Must... keep... going... down. {"position":"3000,1300","size":"100,100"}
+Down... down... down... down... down...
+
+[[And I became one with the circus band...->Keep on walking down]]
+
+
+:: Nah... I don't think so {"position":"1775,1675","size":"100,100"}
+The more I look into the tunnel, the bigger the pit in my stomach becomes. There's no way she went through there... that would be stupid.
+
+[[I turn around and go to big tree instead.->Tree1]]
+
+
+:: NoGun1 [Good-deed] {"position":"3100,500","size":"100,100"}
+Somehow I feel like I won't need the gun here...
+
+Mhm... could be just a bird. No need to waste bullets for this. I clench my hand, inches from reaching the gun and then pull away.
+
+[[I slowly go around the tree.->continue]]
+
+
+:: Oh shit! [SECRET Need-Programming] {"position":"2600,2275","size":"100,100"}
+What the FUCK is that!?
+
+[[I bolt to the fountain.->Run to the fountain]]
+[(after:10s)[[[The face, It's... changing.->The face, It's... changing]]]]
+
+
+:: Open the doll {"position":"2950,1025","size":"100,100"}
+Oh, what's this? Some sort of letter?
+
+As I open the doll, smaller and smaller dolls come out, a little army of porcelain, each one place on top of the bench. Inside the smallest one was a crumpled letter.
+
+[[I open it and read it.->Read the letter]]
+
+
+:: Peer into the darkness {"position":"1775,1800","size":"100,100"}
+[[What the hell is that?->What's that...?]]
+[[I shake my head and step back->GET OUT NOW!]]
+
+
+:: Photo1 {"position":"1500,1275","size":"100,100"}
+(IMAGE HERE?)
+
+Ineska Yazov. A sight for sore eyes, no doubt...
+
+[[The quickly written down notes of this place.->Location1]]
+[[Enough reading, time to act.->Garden1]]
+
+
+:: Pick up the boat {"position":"925,2900","size":"100,100"}
+I place my hand in the canal and wait for the paper boat to hit it. Once it does, I gently pick it up and unfold it. Who left this here? I don't recall anybody being inside the garden...
+
+[[I read the small letter.->Read the small letter]]
+
+
+:: Read it [Need-Programming] {"position":"3400,625","size":"100,100"}
+"Fate hath bound me to this place, once a haven of joy. Without him, it lies hollow—a shadow of what was. I dwell in memories I once cherished, now burdens I cannot flee."
+
+-CLUE FOUND-
+
+[[I place the paper on my pocket and leave the grove.->Back1]]
+(set:$clueCounter to it + 1)
+
+
+:: Read the letter [Need-Programming] {"position":"2950,1150","size":"100,100"}
+"He was no villain—only a heart too full. He was good to me. His love undid him, turned to wrath for the wrongs wrought upon us."
+
+-CLUE FOUND-
+
+[[Turn around and take a left.->Take the left path]]
+(set:$clueCounter to it + 1)
+(set:$foundDollClue to true)
+
+
+:: Read the small letter [Need-Programming] {"position":"925,2650","size":"100,100"}
+"I recall it clear as day—his kiss, our laughter, the children’s mirth."
+
+-CLUE FOUND-
+
+[[I walk back towards the big tree.->Tree1]]
+(set:$clueCounter to it + 1)
+(set:$foundBoatClue to true)
+
+
+:: Return to the crossing [Need-Programming] {"position":"1900,625","size":"100,100"}
+"Would that he knew I linger here. Would that he sought me, as once he did. My heart aches for him."
+
+-CLUE FOUND-
+
+[[I return back to the forest's entrance.->Forest1]]
+(set:$clueCounter to it + 1)
+
+
+:: Run to the fountain {"position":"2825,1750","size":"100,100"}
+Once I reach the fountain, I put my hands on my knees and take deep breaths, my lungs burning slightly from exertion. Did I just see that? Am I going crazy in this damned pla-
+
+My head snaps up as I hear the sound of a twig cracking.
+
+[[I draw the gun and head towards the noise.->Draw the gun and move to the fountain]]
+[[I move towards the noise.->Cautiously move to the fountain]]
+
+
+:: Run1 {"position":"975,1500","size":"100,100"}
+Something in my brain told me to run... as far away as I could from this place. I didn't even process it before my body was gunning it out of there.
+
+[[I keep running.->Run2]]
+
+
+:: Run2 [ONEWAY] {"position":"975,1650","size":"100,100"}
+As I reach the other end of the street, I suddenly find myself back at the gate of the garden. Did I just run in circle? No, it can't be.
+
+[[I try to run again.->Run3]]
+[[I snap out of it.->Intro3.1]]
+
+
+:: Run3 {"position":"850,1650","size":"100,100"}
+Once again, I reach the end of the street and come right back to the gate. I keep trying, but it's like I'm in the ocean with cement shoes, trying to claw back to the surface.
+
+[[I don't stop running.->Run4]]
+
+
+:: Run4 {"position":"725,1650","size":"100,100"}
+I keep bashing my head against an unbreakable wall and it remains uncaring, unfeeling. I feel the world around me begin to chip, shake and crack under my feet.
+
+[[I frantically keep running.->Run5]]
+
+
+:: Run5 {"position":"600,1650","size":"100,100"}
+As if made of glass, the surrondings begin to web into shards of matter, the sound of metal, dirt and stone overpowering my ears as I frantically tried to get out of this nightmare.
+
+[[And then, everything shattered. I fell. -> Run6]]
+
+
+:: RunENDING [ENDING SECRET] {"position":"350,1650","size":"100,100"}
+(align:"=><=")[THE END]
+
+(align:"=><=")["The oldest and strongest emotion of mankind is fear, and the oldest and strongest kind of fear is fear of the unknown." -  H. P. Lovecraft]
+
+(align:"=><=")[[[Wake up, once more.->TitleScreen]]]
+
+
+:: Secret1 [SECRET] {"position":"2150,325","size":"100,100"}
+Behind the bench, I see some perfectly baked piece of bread. It was squeaky clean, somehow immune to the all the bugs and grime this forest held. I might be a bad man... but I'm no food waster. (set: $gotBread to true)
+
+[[I take the bread with me and get up.->ForestForward1]]
+
+
+:: Shoot her and take the book [ENDING] {"position":"4375,1625","size":"100,100"}
+The bullet finds it's mark, hitting her square in the heart... making her drop to the ground in a second. I feel the silence weighing down on me as I walk towards the corpse.
+
+[[I kneel down and rip the book out of her hands.->BADEnding1]]
+
+
+:: Sit1 {"position":"2150,475","size":"100,100"}
+I sit down on the bench, taking a deep sigh of relief. Despite being on a mission, a bit of R&R wouldn't hurt. I take a cancer stick from my inner pocket and light it up, taking nice, drawn drags on it.
+
+[[Enough smoking, time to keep going.->ForestForward1]]
+(if: not $gotBread and (history: where its name contains "Secret1")'s length = 0)[(after:15s)[[[As I take in the view I find some... bread?->Secret1]]]]
+
+
+:: Stairs1 {"position":"2300,775","size":"100,100"}
+Looking at the staircase, I notice the sheen of the mud being hit by the sun. It bulldozes down through the forest and one wrong move might make me go faster than I would like.
+
+[[I go down.->go down]]
+[[I go down cautiously.->go down cautiously]]
+
+
+:: Take a closer look {"position":"1225,2900","size":"100,100"}
+As I walk a little bit, I notice a small paper boat coming towards me. It's bobbing up and down through the canal, taken by the hand of the small waves in the water.
+
+[[I stop it with my gloved hand and pick it up.->Pick up the boat]]
+[[I let it travel down the canal.->Let it travel down the canal]]
+
+
+:: Take cover behind some bushes and scout the fountain {"position":"3175,1675","size":"100,100"}
+There she is! Sitting by the fountain... This is my chance.
+
+[[Cock the gun and take aim]]
+
+
+:: Take the left path {"position":"2575,925","size":"100,100"}
+Has I went through the left, the vegetation grew all around me, trying to swallow me whole. I reach the top of a cliff overlooking the cross-shaped fountain below. Looks like a small path leads down to the far side of the lake over there.
+
+(if:$foundCliffClue is false)[[[Have a look around.->have a look around]]]
+[[Head towards the lake.->Lake1]]
+
+
+:: Take the letter {"position":"1400,1800","size":"100,100"}
+The moment my hand takes hold of the worn letter, the creature's hand suddenly vanishes into mist... Is my mind playing tricks on me or am I going crazy?
+
+[[I open the letter and check its' contents.->Check the piece of paper]]
+
+
+:: Take the right path {"position":"2700,775","size":"100,100"}
+I go through the right path, as I keep walking, I stop at yet another fork in the road. Another two paths for me to chose.
+
+[[Go to the left.->Go to the left]]
+[[Go to the right.->Go to the right]]
+
+
+:: The face, It's... changing {"position":"2825,2275","size":"100,100"}
+The horrid face began twisting and turning, it's features deforming until it became beautiful and... hauntingly familiar. Do I know her? I feel like I should do...
+
+[[I gaze into her eyes.->Gaze into her eyes]]
+
+
+:: TitleScreen {"position":"350,1500","size":"100,100"}
+(align:"=><=")[WITHERING TEARS]
+
+(align:"=><=")[“Man is the only creature who refuses to be what he is.” - Albert Camus]
+
+(align:"=><=")[[Step into the garden->Intro1]]
+
+(set: $gotBread to false)
+(set: $blockGroveTree to false)
+(set:$allowLeave to false)
+(set:$foundBoatClue to false)
+(set:$foundCliffClue to false)
+(set:$foundDollClue to false)
+(set: $clueCounter to 0)
+
+
+
+:: Tree1 {"position":"1375,2650","size":"100,100"}
+I stop by the tree, looking up at it's sheer size. Massive roots burrow into the soil, keeping it sturdy. To the right, a minute fountain stands under the canopy of this massive conifer. To the left... some sort of small canal, whispers of water flowing through it.
+
+(if:(history: where its name contains "Check the small fountain")'s length == 0)[[[Check the small shaded fountain.->Check the small fountain]]]
+[[Inspect the small water canal.->Check the canal]]
+[[Turn around and go back.->Garden2]]
+
+
+:: Turn around and leave [Need-Programming] {"position":"1675,2650","size":"100,100"}
+"Pedro..."
+
+-ADD A GHOST GIF HERE. SPOOPY!-
+
+[[Huh! Who's there?!->Who's there!]]
+
+
+:: What's that...? [Need-Programming ONEWAY] {"position":"1650,1800","size":"100,100"}
+''(text-colour: blue)|text>[GET OUT OF THERE!]'' (after:4s) [[[GET OUT OF THERE!->GET THE HELL OUT]]]
+
+(live: 4s)[
+	(replace: ?text)[]
+	(stop:)
+]
+
+
+:: Who's there! {"position":"1825,2650","size":"100,100"}
+I turn my head back to the fountain for a second and I see nothing. My eyes narrow and my fist clenches. Swear I heard something... must be sleep gnawing at me.
+
+[[I shake my head and go back.->Garden2]]
+
+
+:: and walking... [ONEWAY] {"position":"2500,1300","size":"100,100"}
+As I keep walking down, the knot in my gut seems to grow. The world around me seems to be repeating like mosaics on a wall, trees repeating periodically, bird calls in an insane rhythm, leaves falling in predictable motions.
+
+[[Call it denial but, I keep walking down.->Keep walking down]]
+
+
+:: continue {"position":"3100,625","size":"100,100"}
+Once I take a glance behind the tree, I find nothing there. A strange sense of calmness envelops me as I take a breather and look around. When I land my eyes on the tree, I see a small hole in the bark.
+
+[[I get closer and inspect the hole.->Inspect the hole]]
+[[Leave the area.->Leave the area]]
+
+
+:: go down {"position":"2300,900","size":"100,100"}
+I bite my tongue and start going down the staircase. I don't have all the time in the world to find her. A few stairs shouldn't be the end of the world...
+
+[[I keep making my way down. ->keep walking down]]
+
+
+:: go down cautiously {"position":"2450,775","size":"100,100"}
+I take my time, slowly making my way down the staircase. The ground is too muddy to even try to go fast.
+
+[[I keep moving carefully.->keep moving carefully]]
+
+
+:: have a look around {"position":"2450,925","size":"100,100"}
+Moving towards the edge of the cliff, I can see a cross-shaped fountain below. 
+As I plant my feet on the edge of the cliff, I can see the fountain more clearly. Looking down, I notice something on the rocky surface. Looks like a piece of paper.
+
+[[I carefully pickup the note and inspect it.->Look around]]
+[[Ignore it and keep moving.->keep moving carefully]]
+
+
+:: investigate {"position":"2025,625","size":"100,100"}
+Checking out the stumps, I see a pristine piece of paper with a neat red bow nestled in one of the cracks of the stumps. Seems like Mrs. Russian Spy lost something... I untie the bow and check it's contents.
+
+[[I untie the bow and check it's contents.->Return to the crossing]]
+
+
+:: keep moving carefully {"position":"2575,775","size":"100,100"}
+Reaching the bottom of the stairs, I find two more paths for me to take, one to the left, another to the right. Where should I go?
+
+[[Take the left path.->Take the left path]]
+[[Take the right path.->Take the right path]]
+
+
+:: keep walking down {"position":"2300,1025","size":"100,100"}
+I accelerate my pace down the stairs. Lady luck wasn't on my side as at the end of the stairs, my foot gives way. I bang my arm against the corner of the stair as I begin to roll down the steep woodland. A sharp pain hits my back as I'm stopped by a tree. God... dammit.
+
+[[I shake my head and get up.->Get up and look around]]
+
+
+:: risk walking down {"position":"2375,1300","size":"100,100"}
+Well, I did fall quite a bit, I shouldn't be TOO far from the entrance. I resume walking down, this time carefully. The sky began to be swallowed whole by the foliage, plunging the world into subtle darkness.
+ 
+[[Keep walking down the forest->and walking...]]
+[[try to walk back up]]
+
+
+:: try to walk back up {"position":"2225,1300","size":"100,100"}
+Something about this staircase feels off, my gut is sending all kinds of alarms to me. I dust myself off and begin making my way up. It takes a bit, not wanting to bump my back into a damn tree again but I'm soon back at the top.
+
+[[I take a breather and keep walking.->keep moving carefully]]
