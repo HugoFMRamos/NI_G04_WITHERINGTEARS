@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play WITHERING_TEARS.</tw-noscript></noscript></tw-story>
-<tw-storydata name="WITHERING_TEARS" startnode="105" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="AC418CF3-B437-4637-9B60-864CAEF621E1" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">img {
+<tw-storydata name="WITHERING_TEARS" startnode="132" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="AC418CF3-B437-4637-9B60-864CAEF621E1" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">img {
 	display: block;
   	margin: auto;
   	max-width: 50%;
@@ -167,7 +167,9 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 
 Going left, I find myself in a little nook in the middle of the forest. There stood an old bench, secluded from the rest of the world... rotting away on it&#39;s own.
 
-[[I have a look around.-&gt;Have a look around]]</tw-passagedata><tw-passagedata pid="41" name="Go to the right" tags="" position="1900,1550" size="100,100">As I take a right I find myself back at the entrance, this abandoned world seemingly taken me in circles.(if:(history: where its name contains &quot;Check the tunnel&quot;)&#39;s length is 0)[As I look to my side I see a dark barred tunnel.] (else:)[As I look to my side I see &#39;&#39;the&#39;&#39; dark barred tunnel... &#39;&#39;again.&#39;&#39; I don&#39;t think I want to go back there.]
+[[I have a look around.-&gt;Have a look around]]</tw-passagedata><tw-passagedata pid="41" name="Go to the right" tags="" position="1900,1550" size="100,100">
+
+As I take a right I find myself back at the entrance, this abandoned world seemingly taken me in circles.(if:(history: where its name contains &quot;Check the tunnel&quot;)&#39;s length is 0)[As I look to my side I see a dark barred tunnel.] (else:)[As I look to my side I see &#39;&#39;the&#39;&#39; dark barred tunnel... &#39;&#39;again.&#39;&#39; I don&#39;t think I want to go back there.]
 
 [[Go to the large tree.-&gt;Tree1]]
 (if:(history: where its name contains &quot;Check the piece of paper&quot;)&#39;s length is 0)[[[Investigate the tunnel.-&gt;Check the tunnel]]]</tw-passagedata><tw-passagedata pid="42" name="Go to the woman" tags="Need-Programming" position="3925,2000" size="100,100">Approaching her, a calm washes over me. My brain hurts and throbs against my skull. I feel almost... compelled to go to her. To be with her.
@@ -409,8 +411,6 @@ As I walk a little bit, I notice a small paper boat coming towards me. It&#39;s 
 
 (align:&quot;=&gt;&lt;=&quot;)[“Man is the only creature who refuses to be what he is.” - Albert Camus]
 
-(align:&quot;=&gt;&lt;=&quot;)[&#39;&#39;TRIGGER WARNING: THIS GAME GOES THROUGH TOPICS OF SUICIDE AND SELF HARM. PROCEED WITH CAUTION!&#39;&#39;]
-
 (align:&quot;=&gt;&lt;=&quot;)[[Step into the garden-&gt;Intro1]]
 
 (set: $gotBread to false)
@@ -498,7 +498,9 @@ As I plant my feet on the edge of the cliff, I can see the fountain more clearly
 
 (align:&quot;=&gt;&lt;=&quot;)[“Most people are not just comfortable in their ignorance, but hostile to anyone who points it out.” -  Plato]
 
-(align:&quot;=&gt;&lt;=&quot;)[[[Wake up, once more.-&gt;TitleScreen]]]</tw-passagedata></tw-storydata>
+(align:&quot;=&gt;&lt;=&quot;)[[[Wake up, once more.-&gt;TitleScreen]]]</tw-passagedata><tw-passagedata pid="132" name="Untitled Passage" tags="" position="200,1500" size="100,100">(align:&quot;=&gt;&lt;=&quot;)[&#39;&#39;TRIGGER WARNING: THIS GAME GOES THROUGH TOPICS OF SUICIDE AND SELF HARM. PROCEED WITH CAUTION!&#39;&#39;]
+
+(align:&quot;=&gt;&lt;=&quot;)[[Continue.-&gt;TitleScreen]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
