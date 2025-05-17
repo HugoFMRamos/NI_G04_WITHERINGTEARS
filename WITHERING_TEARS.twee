@@ -217,8 +217,9 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 Unholstering the gun, I see her eyes falling on me, widening, her hand quickly reaching for her coat. Shit, it's now or never.
 
 [[I quickly, take aim and fire.->Shoot her and take the book]]
-(if:$clueCounter >= 4)[[I don't shoot her.->Don't shoot her]]
-(else:)[[I don't shoot her.->Choose to not shoot, but shoots anyway]]
+(if: $clueCounter >= 4)[[[I don't shoot her.->Don't shoot her]]]
+(else:)[[[I don't shoot her.->Choose to not shoot, but shoots anyway]]]
+
 
 
 :: Disclaimer {"position":"200,1500","size":"100,100"}
