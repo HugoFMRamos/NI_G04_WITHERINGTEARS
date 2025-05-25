@@ -9,11 +9,17 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play WITHERING_TEARS.</tw-noscript></noscript></tw-story>
-<tw-storydata name="WITHERING_TEARS" startnode="132" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="AC418CF3-B437-4637-9B60-864CAEF621E1" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">img {
+<tw-storydata name="WITHERING_TEARS" startnode="132" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="AC418CF3-B437-4637-9B60-864CAEF621E1" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">img:not(#logo) {
 	display: block;
   	margin: auto;
   	max-width: 50%;
   	border: 5px solid black;
+}
+
+#logo {
+  	display: block;
+  	margin: auto;
+  	max-width: 90%;
 }
 
 tw-story {
@@ -91,7 +97,8 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 &quot;This lake, this tree... echoes of jot (text-colour:red)[remained], scattered like leaves on the wind. And now? Nothing but a lost soul, wrapped in eternal sorrow.&quot;
 
 [[Go anywhere but here.-&gt;Garden2]]
-(set: $clueCounter to it + 1)</tw-passagedata><tw-passagedata pid="8" name="Check the small fountain" tags="" position="1525,2650" size="100,100">&lt;/style&gt;
+(set: $clueCounter to it + 1)
+(track: &quot;023_Clue1&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="8" name="Check the small fountain" tags="" position="1525,2650" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Check%20the%20small%20fountain.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -376,11 +383,7 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 I&#39;m walking down a path on the street... and at the end of that street, is a garden. Inside that garden, there is a woman. I am here to kill her.
 
 [[Continue.-&gt;Intro2]]
-
-(track: &quot;introMusic&quot;, &quot;stop&quot;)
-(track: &quot;rain&quot;, &quot;volume&quot;, 0.5)
-(track: &quot;rain&quot;, &quot;loop&quot;, true)
-(track: &quot;rain&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="50" name="Intro2" tags="" position="975,1350" size="100,100">&lt;/style&gt;
+(track: &quot;001_Intro&quot;, &quot;stop&quot;)</tw-passagedata><tw-passagedata pid="50" name="Intro2" tags="" position="975,1350" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Intro2.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -511,7 +514,8 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 &quot;Withering Tears&quot; garden... Built in 1850 by some rich snob. Now an abandoned, overgrown mess. A perfect place for a murder.
 
 [[The fading target&#39;s photo.-&gt;Photo1]]
-[[Enough reading, time to act.-&gt;Garden1]]</tw-passagedata><tw-passagedata pid="71" name="Look around" tags="Need-Programming" position="2450,1075" size="100,100">&lt;/style&gt;
+[[Enough reading, time to act.-&gt;Garden1]]</tw-passagedata><tw-passagedata pid="71" name="Look around" tags="Need-Programming" position="2450,1075" size="100,100">(track: &quot;023_Clue1&quot;, &quot;play&quot;)
+&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Look%20around%20(clue%20flower).png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -595,14 +599,16 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 &lt;/div&gt;
 I place my hand in the canal and wait for the paper boat to hit it. Once it does, I gently pick it up and unfold it. Who left this here? I don&#39;t recall anybody being inside the garden...
 
-[[I read the small letter.-&gt;Read the small letter]]</tw-passagedata><tw-passagedata pid="84" name="Read it" tags="Need-Programming" position="3400,625" size="100,100">&lt;/style&gt;
+[[I read the small letter.-&gt;Read the small letter]]</tw-passagedata><tw-passagedata pid="84" name="Read it" tags="Need-Programming" position="3400,625" size="100,100">(track: &quot;023_Clue1&quot;, &quot;play&quot;)
+&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Clue%20grove.png?raw=true&quot;&gt;
 &lt;/div&gt;
 &quot;Fate hath bound me to this place, once a haven of joy. Without him, it lies hollow—a shadow of what was. (text-colour:red)[I] dwell in memories I once cherished, now burdens I cannot flee.&quot;
 
 [[I place the paper on my pocket and leave the grove.-&gt;Back1]]
-(set:$clueCounter to it + 1)</tw-passagedata><tw-passagedata pid="85" name="Read the letter" tags="Need-Programming" position="2950,1150" size="100,100">&lt;/style&gt;
+(set:$clueCounter to it + 1)</tw-passagedata><tw-passagedata pid="85" name="Read the letter" tags="Need-Programming" position="2950,1150" size="100,100">(track: &quot;023_Clue1&quot;, &quot;play&quot;)
+&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Read%20the%20letter%20(matryoska%20clue).png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -612,7 +618,8 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 
 [[Turn around and take a left.-&gt;Take the left path]]
 (set:$clueCounter to it + 1)
-(set:$foundDollClue to true)</tw-passagedata><tw-passagedata pid="86" name="Read the small letter" tags="Need-Programming" position="925,2650" size="100,100">&lt;/style&gt;
+(set:$foundDollClue to true)</tw-passagedata><tw-passagedata pid="86" name="Read the small letter" tags="Need-Programming" position="925,2650" size="100,100">(track: &quot;023_Clue1&quot;, &quot;play&quot;)
+&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Read%20the%20small%20letter%20(CLUE%20CANAL).png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -620,7 +627,9 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 
 [[I walk back towards the big tree.-&gt;Tree1]]
 (set:$clueCounter to it + 1)
-(set:$foundBoatClue to true)</tw-passagedata><tw-passagedata pid="87" name="Return to the crossing" tags="Need-Programming" position="1900,625" size="100,100">&lt;/style&gt;
+(set:$foundBoatClue to true)</tw-passagedata><tw-passagedata pid="87" name="Return to the crossing" tags="Need-Programming" position="1900,625" size="100,100">(track: &quot;023_Clue1&quot;, &quot;play&quot;)
+
+&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Garden2.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -736,12 +745,10 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 &lt;/div&gt;
 The horrid face began twisting and turning, it&#39;s features deforming until it became beautiful and... hauntingly familiar. Do I know her? I feel like I should do...
 
-[[I gaze into her eyes.-&gt;Gaze into her eyes]]</tw-passagedata><tw-passagedata pid="105" name="TitleScreen" tags="" position="350,1500" size="100,100">(track: &quot;rain&quot;, &quot;stop&quot;)
-(track: &quot;introMusic&quot;, &quot;loop&quot;, true)
-(track: &quot;introMusic&quot;, &quot;play&quot;)
-
-(align:&quot;=&gt;&lt;=&quot;)[WITHERING TEARS]
-
+[[I gaze into her eyes.-&gt;Gaze into her eyes]]</tw-passagedata><tw-passagedata pid="105" name="TitleScreen" tags="" position="350,1500" size="100,100">&lt;/style&gt;
+&lt;img
+src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/logo_witheringtears.png?raw=true&quot; id=&quot;logo&quot;&gt;
+&lt;/div&gt;
 (align:&quot;=&gt;&lt;=&quot;)[“Man is the only creature who refuses to be what he is.” - Albert Camus]
 
 (align:&quot;=&gt;&lt;=&quot;)[[Step into the garden.-&gt;Intro1]]
@@ -753,7 +760,9 @@ The horrid face began twisting and turning, it&#39;s features deforming until it
 (set:$foundBoatClue to false)
 (set:$foundCliffClue to false)
 (set:$foundDollClue to false)
-(set: $clueCounter to 0)</tw-passagedata><tw-passagedata pid="106" name="Tree1" tags="" position="1375,2650" size="100,100">&lt;/style&gt;
+(set: $clueCounter to 0)
+(track: &quot;001_Intro&quot;, &quot;loop&quot;, true)
+(track: &quot;001_Intro&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="106" name="Tree1" tags="" position="1375,2650" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/TREE1.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -926,9 +935,60 @@ As I feel the cold steel on the side of my head, I begin to reflect on what I ha
 
 (align:&quot;=&gt;&lt;=&quot;)[[[Wake up, once more.-&gt;TitleScreen]]]</tw-passagedata><tw-passagedata pid="132" name="Disclaimer" tags="" position="200,1500" size="100,100">(align:&quot;=&gt;&lt;=&quot;)[&#39;&#39;TRIGGER WARNING: THIS GAME GOES THROUGH TOPICS OF SUICIDE AND SELF HARM. PROCEED WITH CAUTION!&#39;&#39;]
 
-(align:&quot;=&gt;&lt;=&quot;)[[Continue.-&gt;TitleScreen]]</tw-passagedata><tw-passagedata pid="133" name="hal.tracks" tags="" position="200,1375" size="100,100">introMusic: https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/music/introMusic.mpeg
-
-rain: https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/music/43344__inchadney__rain.mp3</tw-passagedata></tw-storydata>
+(align:&quot;=&gt;&lt;=&quot;)[[Continue.-&gt;TitleScreen]]</tw-passagedata><tw-passagedata pid="133" name="hal.tracks" tags="" position="200,1375" size="100,100">001_Intro:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/001_Intro.mp3
+002_Run1:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/002_Run1.wav
+003_Breath1:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/003_Breath1.wav
+004_Breath2:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/004_Breath2.wav
+005_BeatingHeart1:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/005_BeatingHeart1.wav
+006_FaintMusic:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/006_FaintMusic.wav
+007_Tinnitus:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/007_Tinnitus.mp3
+008_Ending1:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/008_Ending1.mp3
+009_NoteBook1:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/009_NoteBook1.wav
+010_Duda1:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/010_Duda1.wav
+011_NoteBook2:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/011_NoteBook2.mp3
+012_Thunder:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/012_Thunder.wav
+013_Rain:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/013_Rain.mp3
+014_Bushes1:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/014_Bushes1.mp3
+015_Forest1:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/015_Forest1.wav
+016_Walk1:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/016_Walk1.wav
+017_Smoking:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/017_Smoking.wav
+018_Forest2:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/018_Forest2.wav
+019_Walk2:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/019_Walk2.wav
+020_Forest3:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/020_Forest3.wav
+021_Tunnel1:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/021_Tunnel1.wav
+022_JumpScare1:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/022_JumpScare1.mp3
+023_Clue1:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/023_Clue1.wav
+024_Tension1:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/024_Tension1.mp3
+025_Falling1:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/025_Falling1.wav
+026_Forest4:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/026_Forest4.mp3
+027_Grunt1:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/027_Grunt1.wav
+028_Ending2:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/028_Ending2.wav
+029_Laughter:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/029_Laughter.wav
+030_Tension2:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/030_Tension2.mp3
+031_Tension3:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/031_Tension3.wav
+032_GunShot:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/032_GunShot.wav
+033_Tension4:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/033_Tension4.wav
+034_Cough:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/034_Cough.wav
+035_Ending3:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/035_Ending3.wav
+036_Fire:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/036_Fire.wav
+037_Lake1:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/037_Lake1.wav
+038_Bubbles:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/038_Bubbles.wav
+039_JumpScare2:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/039_JumpScare2.mp3
+040_Ghost1:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/040_Ghost1.wav
+041_Ghost2:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/041_Ghost2.wav
+042_Lake2:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/042_Lake2.wav
+043_Lake3:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/043_Lake3.wav
+044_GoodEnding1:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/044_GoodEnding1.wav
+045_TwigCracking:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/045_TwigCracking.wav
+046_Ending4:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/046_Ending4.mp3
+047_Ending5:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/047_Ending5.wav
+048_GoodEnding2:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/048_GoodEnding2.mp3
+049_Duck1:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/049_Duck1.wav
+050_Duck2:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/050_Duck2.wav
+051_Duck3:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/051_Duck3.mp3
+052_Duck4:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/052_Duck4.mp3
+053_Canal:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/053_Canal.wav
+054_Fountain:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/054_Fountain.wav</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
