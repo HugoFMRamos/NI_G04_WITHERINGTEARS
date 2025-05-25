@@ -1258,6 +1258,7 @@ The horrid face began twisting and turning, it's features deforming until it bec
 
 
 :: TitleScreen {"position":"350,1500","size":"100,100"}
+(track: "rain", "stop")
 (track: "introMusic", "loop", true)
 (track: "introMusic", "play")
 
