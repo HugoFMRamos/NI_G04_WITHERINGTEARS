@@ -78,19 +78,26 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 I tear the bread into crumbs and begin throwing it to the ducks. Some begin to swim to shore and start picking at it. An oddly warm feeling went through my chest as I saw them eat.(set:$gotBread to false)
 
 [[I look at a particular white duck.-&gt;Duck1]]
-[[Guess I did my good deed for the day.-&gt;Lake1]]</tw-passagedata><tw-passagedata pid="5" name="Cautiously move to the fountain" tags="Good-deed" position="3025,2000" size="100,100">&lt;/style&gt;
+[[Guess I did my good deed for the day.-&gt;Lake1]]
+(track: &quot;049_Duck1&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="5" name="Cautiously move to the fountain" tags="Good-deed" position="3025,2000" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/ForestForward1,%20Draw%20the%20gun%20and%20move%20to%20the%20fountain,%20Cautiously%20move%20to%20the%20fountain.png?raw=true&quot;&gt;
 &lt;/div&gt;
 As I cautiously move toward the fountain, I notice the sun already beginning to set... The cold fingers of the night slowly coming up from the horizon. I don&#39;t have much time. I quickly scout the area, going towards some green bushes.
 
-[[I look around the bushes.-&gt;Move up behind the bushes]]</tw-passagedata><tw-passagedata pid="6" name="Check the canal" tags="" position="1225,2650" size="100,100">&lt;/style&gt;
+[[I look around the bushes.-&gt;Move up behind the bushes]]
+(track: &quot;054_Fountain&quot;, &quot;loop&quot;, &quot;true&quot;)
+(track: &quot;054_Fountain&quot;, &quot;play&quot;)
+(track: &quot;037_Lake1&quot;, &quot;stop&quot;)</tw-passagedata><tw-passagedata pid="6" name="Check the canal" tags="" position="1225,2650" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Check%20the%20canal.png?raw=true&quot;&gt;
 &lt;/div&gt;
 I walk towards the small canal. Calling it a canal is an overstatement. It is more of a sad little crack in the stone than anything. It seems to lead out of the garden. At least the water is clear.
 
-(if:$foundBoatClue is true)[[[Turn back-&gt;Tree1]]](else:)[[[I follow the canal upstream.-&gt;Take a closer look]]]</tw-passagedata><tw-passagedata pid="7" name="Check the piece of paper" tags="Need-Programming" position="1275,1800" size="100,100">&lt;/style&gt;
+(if:$foundBoatClue is true)[[[Turn back-&gt;Tree1]]](else:)[[[I follow the canal upstream.-&gt;Take a closer look]]]
+(track: &quot;020_Forest3&quot;, &quot;stop&quot;)
+(track: &quot;053_Canal&quot;, &quot;loop&quot;, true)
+(track: &quot;053_Canal&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="7" name="Check the piece of paper" tags="Need-Programming" position="1275,1800" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Check%20the%20piece%20of%20paper%20(TUNNEL).png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -104,20 +111,25 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 &lt;/div&gt;
 The fountain was a peaceful place, flora scattered everywhere. I squat down a look at the waters for a little bit. Taking a deep breath, I stand back up... Nothing to see here.
 
-[[I turn around to leave.-&gt;Turn around and leave]]</tw-passagedata><tw-passagedata pid="9" name="Check the tunnel" tags="" position="1900,1675" size="100,100">&lt;/style&gt;
+[[I turn around to leave.-&gt;Turn around and leave]]
+(track: &quot;020_Forest3&quot;, &quot;stop&quot;)
+(track: &quot;054_Canal&quot;, &quot;loop&quot;, true)
+(track: &quot;054_Fountain&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="9" name="Check the tunnel" tags="" position="1900,1675" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Check%20the%20tunnel.png?raw=true&quot;&gt;
 &lt;/div&gt;
 One step after another I approach the tunnel. The iron bars had seen better days... they were rusty and old, just like the rest of this place. Inside was damp and a pungent scent of earth and sewage invaded my nostrils.
 
 [[Maybe she&#39;s in there?-&gt;Get closer and look into the tunnel]]
-[[Nah... I don&#39;t think so.-&gt;Nah... I don&#39;t think so]]</tw-passagedata><tw-passagedata pid="10" name="Choose to not shoot, but shoots anyway" tags="" position="3800,1500" size="100,100">&lt;/style&gt;
+[[Nah... I don&#39;t think so.-&gt;Nah... I don&#39;t think so]]
+(track: &quot;021_Tunnel1&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="10" name="Choose to not shoot, but shoots anyway" tags="" position="3800,1500" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Don_t%20shoot%20her,%20Choose%20to%20not%20shoot%20but%20shoots%20anyway.png?raw=true&quot;&gt;
 &lt;/div&gt;
 Seriously? You think I am just going to stand here and play second fiddle? No, you must crazy or something. This time I chose.
 
-[[I let the gun ring out in the garden.-&gt;Shoot her and take the book]]</tw-passagedata><tw-passagedata pid="11" name="Close my eyes and focus" tags="" position="4075,1800" size="100,100">&lt;/style&gt;
+[[I let the gun ring out in the garden.-&gt;Shoot her and take the book]]
+(track: &quot;005_BeatingHeart1&quot;, &quot;stop&quot;)</tw-passagedata><tw-passagedata pid="11" name="Close my eyes and focus" tags="" position="4075,1800" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Close%20my%20eyes%20and%20focus.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -132,14 +144,15 @@ Unholstering the gun, I see her eyes falling on me, widening, her hand quickly r
 [[I quickly, take aim and fire.-&gt;Shoot her and take the book]]
 (if: $clueCounter &gt;= 4)[[[I don&#39;t shoot her.-&gt;Don&#39;t shoot her]]]
 (else:)[[[I don&#39;t shoot her.-&gt;Choose to not shoot, but shoots anyway]]]
-</tw-passagedata><tw-passagedata pid="13" name="Don&#39;t shoot her" tags="" position="3625,1800" size="100,100">&lt;/style&gt;
+(track: &quot;005_BeatingHeart1&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="13" name="Don&#39;t shoot her" tags="" position="3625,1800" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Don_t%20shoot%20her.png?raw=true&quot;&gt;
 &lt;/div&gt;
 Before I realize I was too slow, she takes out an old, worn book. Is that the book I came for? The one my contractor told me to tear off her hands? W-wait... she&#39;s still smili- No. Focus on the damn mission Peter!
 
 [[&quot;B-But... I can&#39;t.&quot;-&gt;Lower the gun]]
-[[&quot;I&#39;m s-sorry.&quot;-&gt;Shoot her and take the book]]</tw-passagedata><tw-passagedata pid="14" name="DontShoot1" tags="Good-deed" position="3400,400" size="100,100">&lt;/style&gt;
+[[&quot;I&#39;m s-sorry.&quot;-&gt;Shoot her and take the book]]
+(track: &quot;005_BeatingHeart1&quot;, &quot;stop&quot;)</tw-passagedata><tw-passagedata pid="14" name="DontShoot1" tags="Good-deed" position="3400,400" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/DontShoot1,%20Aim.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -151,14 +164,18 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 &lt;/div&gt;
 Damn it, the sun is setting, I&#39;m almost out of time. I need to be careful, if it&#39;s the target, she could be armed.
 
-[[Take cover behind some bushes and scout the fountain]]</tw-passagedata><tw-passagedata pid="16" name="Drink some water from the lake" tags="" position="2475,2150" size="100,100">&lt;/style&gt;
+[[Take cover behind some bushes and scout the fountain]]
+(track: &quot;054_Fountain&quot;, &quot;loop&quot;, &quot;true&quot;)
+(track: &quot;054_Fountain&quot;, &quot;play&quot;)
+(track: &quot;037_Lake1&quot;, &quot;stop&quot;)</tw-passagedata><tw-passagedata pid="16" name="Drink some water from the lake" tags="" position="2475,2150" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Gifs/Drink%20some%20water%20from%20the%20lake.gif?raw=true&quot;&gt;
 &lt;/div&gt;
 I tear my gloves off and cup my hands into the water. As the cool water hit my lower lip, I take a sip. Feeling refreshed, I shake my hands and put the gloves back on. Before I can stand up, I notice a disturbance in the water. Are those bubbles?
 
 [[I get a closer look.-&gt;Look closer]]
-[[Leave-&gt;Lake beginning]]</tw-passagedata><tw-passagedata pid="17" name="Duck1" tags="" position="2350,2400" size="100,100">&lt;/style&gt;
+[[Leave-&gt;Lake beginning]]
+(track: &quot;038_Bubbles&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="17" name="Duck1" tags="" position="2350,2400" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/duck1.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -176,7 +193,10 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 &lt;/div&gt;
 The duck looks back at me. It&#39;s eyes seem to stare right through my very soul. I can&#39;t help but approach the duck, as if it was calling for my name.
 
-[[One step, another, then another.-&gt;Duck4]]</tw-passagedata><tw-passagedata pid="20" name="Duck4" tags="" position="2600,2525" size="100,100">&lt;/style&gt;
+[[One step, another, then another.-&gt;Duck4]]
+(track: &quot;037_Lake1&quot;, &quot;stop&quot;)
+(track: &quot;049_Duck1&quot;, &quot;stop&quot;)
+(track: &quot;050_Duck2&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="20" name="Duck4" tags="" position="2600,2525" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/duck4.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -184,11 +204,13 @@ When I get close to the duck, I kneel down and begin petting it&#39;s head. Its&
 
 [[Then, I feel my body morph.-&gt;Duck5]]</tw-passagedata><tw-passagedata pid="21" name="Duck5" tags="" position="2475,2525" size="100,100">&lt;/style&gt;
 &lt;img
-src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/duck4.png?raw=true&quot;&gt;
+src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/duck%205.png?raw=true&quot;&gt;
 &lt;/div&gt;
 I feel the world growing bigger... me becoming smaller. My clothes swallow me as I keep looking at the duck. I feel my muscles and bones stretch and deform, my skin growing quills until...
 
-[[Quack.-&gt;Duck6]]</tw-passagedata><tw-passagedata pid="22" name="Duck6" tags="" position="2350,2525" size="100,100">&lt;/style&gt;
+[[Quack.-&gt;Duck6]]
+(track: &quot;050_Duck2&quot;, &quot;stop&quot;)
+(track: &quot;051_Duck3&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="22" name="Duck6" tags="" position="2350,2525" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/duck%206.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -198,7 +220,9 @@ Quack, quack, quack...
 
 (align:&quot;=&gt;&lt;=&quot;)[&quot;Don&#39;t quack like a duck, soar like an eagle!&quot; -  Ken Blanchard]
 
-(align:&quot;=&gt;&lt;=&quot;)[[[Wake up, once more.-&gt;TitleScreen]]]</tw-passagedata><tw-passagedata pid="24" name="Fail1" tags="" position="3250,300" size="100,100">&lt;/style&gt;
+(align:&quot;=&gt;&lt;=&quot;)[[[Wake up, once more.-&gt;TitleScreen]]]
+(track: &quot;052_Duck4&quot;, &quot;play&quot;)
+(track: &quot;051_Duck3&quot;, &quot;stop&quot;)</tw-passagedata><tw-passagedata pid="24" name="Fail1" tags="" position="3250,300" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Fail1,%20Gun2.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -214,14 +238,18 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 [[Take the left.-&gt;ForestLeft1]]
 [[Keep going forward.-&gt;ForestForward1]]
 [[Take the right.-&gt;ForestRight1]]
-[[Go back.-&gt;Garden2]]</tw-passagedata><tw-passagedata pid="26" name="Forest2" tags="" position="2650,350" size="100,100">&lt;/style&gt;
+[[Go back.-&gt;Garden2]]
+(track: &quot;018_Forest2&quot;, &quot;stop&quot;)
+(track: &quot;026_Forest4&quot;, &quot;loop&quot;, true)
+(track: &quot;026_Forest4&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="26" name="Forest2" tags="" position="2650,350" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Forest2,%20Get%20up%20and%20look%20around.png?raw=true&quot;&gt;
 &lt;/div&gt;
 Despite the thickening woodland, something in me is telling me to keep going. Morbid curiosity getting the best of me it seems...
 
 [[I push my doubts aside and keep pushing.-&gt;Forest3]]
-[[I shake my head and go back.-&gt;ForestRight1]]</tw-passagedata><tw-passagedata pid="27" name="Forest3" tags="" position="2800,350" size="100,100">&lt;/style&gt;
+[[I shake my head and go back.-&gt;ForestRight1]]
+(track: &quot;014_Bushes1&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="27" name="Forest3" tags="" position="2800,350" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Forest3.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -261,13 +289,15 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 I ain&#39;t got time to let the garden play tricks on me. I got a target to take care of. I turn away from the tunnel and just walk off. Where should I go?
 
 [[Go to the big tree instead.-&gt;Tree1]]
-[[Go to the lake.-&gt;Lake1]]</tw-passagedata><tw-passagedata pid="32" name="GET THE HELL OUT" tags="" position="1525,1800" size="100,100">&lt;/style&gt;
+[[Go to the lake.-&gt;Lake1]]
+(track: &quot;003_Breath1&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="32" name="GET THE HELL OUT" tags="" position="1525,1800" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/GET%20THE%20HELL%20OUT.png?raw=true&quot;&gt;
 &lt;/div&gt;
 Just as I&#39;m about to haul ass, the creature&#39;s hand opens, revealling a letter. I scratch my head and my brow furrows. This place is more insane than Alice in Wonderland...
 
-[[I reach my hand out and take it...-&gt;Take the letter]]</tw-passagedata><tw-passagedata pid="33" name="Garden1" tags="" position="1775,1425" size="100,100">&lt;/style&gt;
+[[I reach my hand out and take it...-&gt;Take the letter]]
+(track: &quot;039_JumpScare2&quot;, &quot;stop&quot;)</tw-passagedata><tw-passagedata pid="33" name="Garden1" tags="" position="1775,1425" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Garden1.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -282,20 +312,30 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 
 [[The massive tree looming over me.-&gt;Tree1]]
 [[The crystal clear lake.-&gt;Lake1]]
-[[The tight, interwoven paths of the forest.-&gt;Forest1]]</tw-passagedata><tw-passagedata pid="35" name="Gaze into her beautiful eyes" tags="" position="3925,1800" size="100,100">&lt;/style&gt;
+[[The tight, interwoven paths of the forest.-&gt;Forest1]]
+(track: &quot;020_Forest3&quot;, &quot;stop&quot;)
+(track: &quot;026_Forest4&quot;, &quot;stop&quot;)
+(track: &quot;021_Tunnel1&quot;, &quot;stop&quot;)
+(track: &quot;037_Lake1&quot;, &quot;stop&quot;)
+(track: &quot;018_Forest2&quot;, &quot;loop&quot;, true)
+(track: &quot;018_Forest2&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="35" name="Gaze into her beautiful eyes" tags="" position="3925,1800" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Gaze%20into%20her%20beautiful%20eyes.png?raw=true&quot;&gt;
 &lt;/div&gt;
 The gun falls off my hands with a soft thud as it landed on the grass. Her soft voice breaks the tense silence between us- &quot;Pedro... Is that, finally, you? Do you remember me?&quot; -As I hear her words, my brain feels like it wants to crawl out of my skull.
 
-[[I close my eyes and take a deep breath.-&gt;Close my eyes and focus]]</tw-passagedata><tw-passagedata pid="36" name="Gaze into her eyes" tags="Good-deed" position="2825,2150" size="100,100">&lt;/style&gt;
+[[I close my eyes and take a deep breath.-&gt;Close my eyes and focus]]
+(track: &quot;048_GoodEnding2&quot;, &quot;loop&quot;, &quot;true&quot;)
+(track: &quot;048_GoodEnding2&quot;, &quot;play&quot;)
+(track: &quot;054_Fountain&quot;, &quot;stop&quot;)</tw-passagedata><tw-passagedata pid="36" name="Gaze into her eyes" tags="Good-deed" position="2825,2150" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Gifs/Gaze%20into%20her%20eyes.gif?raw=true&quot;&gt;
 &lt;/div&gt;
 And just like that, she had dissapeared. I blinked a few times and shook my head. Is my brain playing tricks or am I getting paranoid?
 
 [[I stand back up.-&gt;Lake beginning]] 
-[[I walk to the bench to unwind.-&gt;BenchNoBread]]</tw-passagedata><tw-passagedata pid="37" name="Get closer and look into the tunnel" tags="" position="1900,1800" size="100,100">&lt;/style&gt;
+[[I walk to the bench to unwind.-&gt;BenchNoBread]]
+</tw-passagedata><tw-passagedata pid="37" name="Get closer and look into the tunnel" tags="" position="1900,1800" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/GetCloserAndLookAtTunnel.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -308,7 +348,8 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 I let out a pained grunt as I get myself back on my feet, a dull ache on my arm and back already gnawing at me. Looking around, everything looks... //different//. If I walk back up I should be able to go back. But there is still a lot to go down...
 
 [[I push that thought aside and go back up.-&gt;try to walk back up]]
-[[I take a risk and keep walking down.-&gt;risk walking down]]</tw-passagedata><tw-passagedata pid="39" name="Go to the lake" tags="" position="2475,2000" size="100,100">&lt;/style&gt;
+[[I take a risk and keep walking down.-&gt;risk walking down]]
+(track: &quot;027_Grunt1&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="39" name="Go to the lake" tags="" position="2475,2000" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Go%20to%20the%20lake.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -383,7 +424,9 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 I&#39;m walking down a path on the street... and at the end of that street, is a garden. Inside that garden, there is a woman. I am here to kill her.
 
 [[Continue.-&gt;Intro2]]
-(track: &quot;001_Intro&quot;, &quot;stop&quot;)</tw-passagedata><tw-passagedata pid="50" name="Intro2" tags="" position="975,1350" size="100,100">&lt;/style&gt;
+(track: &quot;001_Intro&quot;, &quot;stop&quot;)
+(track: &quot;020_Forest3&quot;, &quot;loop&quot;, true)
+(track: &quot;020_Forest3&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="50" name="Intro2" tags="" position="975,1350" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Intro2.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -396,13 +439,18 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 &lt;/div&gt;
 While I look around, I pull out my notebook, the silent assistant of death, to remind myself of my mission.
 
-[[Continue.-&gt;Intro4]]</tw-passagedata><tw-passagedata pid="52" name="Intro3.1" tags="" position="1125,1650" size="100,100">&lt;/style&gt;
+[[Continue.-&gt;Intro4]]
+((track: &quot;009_NoteBook1&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="52" name="Intro3.1" tags="" position="1125,1650" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Intro2.png?raw=true&quot;&gt;
 &lt;/div&gt;
 I shake my head. Must have been the restless night gnawing at my heels. I walk back to the gate.
 
-[[Continue.-&gt;Intro3]]</tw-passagedata><tw-passagedata pid="53" name="Intro4" tags="" position="1275,1350" size="100,100">&lt;/style&gt;
+[[Continue.-&gt;Intro3]]
+(track: &quot;003_Breath1&quot;, &quot;play&quot;)
+(track: &quot;020_Forest3&quot;, &quot;loop&quot;, true)
+(track: &quot;020_Forest3&quot;, &quot;play&quot;)
+(track: &quot;002_Run1&quot;, &quot;stop&quot;)</tw-passagedata><tw-passagedata pid="53" name="Intro4" tags="" position="1275,1350" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Intro3.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -410,7 +458,8 @@ The worn pages told me everything that I needed to know. What should I read firs
 
 [[The fading target&#39;s photo.-&gt;Photo1]]
 [[The quickly written down notes of this place.-&gt;Location1]]
-[[No time for reading, time to act.-&gt;Garden1]]</tw-passagedata><tw-passagedata pid="54" name="Keep observing" tags="" position="3325,2000" size="100,100">&lt;/style&gt;
+[[No time for reading, time to act.-&gt;Garden1]]
+(track: &quot;009_NoteBook1&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="54" name="Keep observing" tags="" position="3325,2000" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Keep%20observing.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -420,7 +469,11 @@ As I keep looking, her eyes land on me. I freeze for a second, my hand clenching
 
 (align:&quot;=&gt;&lt;=&quot;)[&quot;Delay is the deadliest form of denial.&quot; -  C. Northcote Parkinson]
 
-(align:&quot;=&gt;&lt;=&quot;)[[[Wake up, once more.-&gt;TitleScreen]]]</tw-passagedata><tw-passagedata pid="56" name="Keep walking down" tags="" position="2625,1300" size="100,100">&lt;/style&gt;
+(align:&quot;=&gt;&lt;=&quot;)[[[Wake up, once more.-&gt;TitleScreen]]]
+(track: &quot;019_Walk2&quot;, &quot;stop&quot;)
+(track: &quot;006_FaintMusic&quot;, &quot;stop&quot;)
+(track: &quot;029_Laughter&quot;, &quot;stop&quot;)
+(track: &quot;046_Ending4&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="56" name="Keep walking down" tags="" position="2625,1300" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Keep%20walking%20down.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -436,7 +489,9 @@ I pull the trigger and the pistol roars to life, disturbing the quiet of the woo
 
 I lower the gun. The life on her eyes was sucked dry.
 
-[[My job was done.-&gt;Kill2]]</tw-passagedata><tw-passagedata pid="58" name="Kill2" tags="" position="3825,175" size="100,100">&lt;/style&gt;
+[[My job was done.-&gt;Kill2]]
+(track: &quot;032_GunShot&quot;, &quot;play&quot;)
+(track: &quot;005_BeatingHeart1&quot;, &quot;stop&quot;)</tw-passagedata><tw-passagedata pid="58" name="Kill2" tags="" position="3825,175" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Kill2.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -454,7 +509,8 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 &lt;/div&gt;
 My lungs are burning, my body is a raging inferno, almost as if I had inhaled hot coals. My coughing grows more forceful as I fall to my knees, feeling the metallic tang of blood seeping out of my mouth.
 
-[[My strength is leeched away from me.-&gt;Kill5]]</tw-passagedata><tw-passagedata pid="61" name="Kill5" tags="" position="3825,50" size="100,100">&lt;/style&gt;
+[[My strength is leeched away from me.-&gt;Kill5]]
+(track: &quot;034_Cough&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="61" name="Kill5" tags="" position="3825,50" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/BADEnding3,%20Kill5.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -466,22 +522,29 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 &lt;/div&gt;
 This was it... After all these years of being a killer, karma finally caught up to me. This was my penance, a slow... agonizing death. Hell was burning me from the inside out...
 
-[[...and soon enough, it took me there.-&gt;KillENDING]]</tw-passagedata><tw-passagedata pid="63" name="KillENDING" tags="ENDING" position="3575,50" size="100,100">(align:&quot;=&gt;&lt;=&quot;)[THE END]
+[[...and soon enough, it took me there.-&gt;KillENDING]]
+(track: &quot;036_Fire&quot;, &quot;play&quot;)
+</tw-passagedata><tw-passagedata pid="63" name="KillENDING" tags="ENDING" position="3575,50" size="100,100">(align:&quot;=&gt;&lt;=&quot;)[THE END]
 
 (align:&quot;=&gt;&lt;=&quot;)[&quot;It is not death that a man should fear, but he should fear never beginning to live.&quot; -  Marcus Aurelius]
 
-(align:&quot;=&gt;&lt;=&quot;)[[[Wake up, once more.-&gt;TitleScreen]]]</tw-passagedata><tw-passagedata pid="64" name="Kiss her" tags="True-Ending ENDING" position="4675,1800" size="100,100">(align:&quot;=&gt;&lt;=&quot;)[THE END]
+(align:&quot;=&gt;&lt;=&quot;)[[[Wake up, once more.-&gt;TitleScreen]]]
+(track: &quot;035_Ending3&quot;, &quot;play&quot;)
+(track: &quot;026_Forest4&quot;, &quot;stop&quot;)</tw-passagedata><tw-passagedata pid="64" name="Kiss her" tags="True-Ending ENDING" position="4675,1800" size="100,100">(align:&quot;=&gt;&lt;=&quot;)[THE END]
 
 (align:&quot;=&gt;&lt;=&quot;)[&quot;The struggle itself towards the heights is enough to fill a man&#39;s heart. One must imagine Sisyphus happy.&quot; -  Albert Camus]
 
-(align:&quot;=&gt;&lt;=&quot;)[[[You may finally rest, Pedro.-&gt;TitleScreen]]]</tw-passagedata><tw-passagedata pid="65" name="Lake beginning" tags="" position="2825,1900" size="100,100">&lt;/style&gt;
+(align:&quot;=&gt;&lt;=&quot;)[[[You may finally rest, Pedro.-&gt;TitleScreen]]]
+(track: &quot;044_GoodEnding1&quot;, &quot;play&quot;)
+(track: &quot;048_GoodEnding2&quot;, &quot;stop&quot;)</tw-passagedata><tw-passagedata pid="65" name="Lake beginning" tags="" position="2825,1900" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/BADEnding2.png?raw=true&quot;&gt;
 &lt;/div&gt;
 I bring my head up, taking a look around the still lake until something catches the corner of my eye... some sort of, movement near the fountain.
 
 [[I draw the gun and head towards the fountain.-&gt;Draw the gun and move to the fountain]]
-[[I move towards the fountain.-&gt;Cautiously move to the fountain]]</tw-passagedata><tw-passagedata pid="66" name="Lake1" tags="" position="2225,2150" size="100,100">&lt;/style&gt;
+[[I move towards the fountain.-&gt;Cautiously move to the fountain]]
+(track: &quot;010_Duda1&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="66" name="Lake1" tags="" position="2225,2150" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Lake1.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -489,7 +552,10 @@ The lake, It&#39;s a beautiful place, a total contrast of what was going to happ
 
 (if:$gotBread)[[[Give some bread to the ducks-&gt;Bread1]]]
 [[Drink some water from the lake.-&gt;Drink some water from the lake]] 
-[[Sit down on the tree stump.-&gt;BenchNoBread]]</tw-passagedata><tw-passagedata pid="67" name="Leave" tags="" position="3100,300" size="100,100">&lt;/style&gt;
+[[Sit down on the tree stump.-&gt;BenchNoBread]]
+(track: &quot;037_Lake1&quot;, &quot;loop&quot;, true)
+(track: &quot;037_Lake1&quot;, &quot;play&quot;)
+(track: &quot;018_Forest2&quot;, &quot;stop&quot;)</tw-passagedata><tw-passagedata pid="67" name="Leave" tags="" position="3100,300" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/GroveTree1,%20Leave,%20NoGun1.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -514,7 +580,8 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 &quot;Withering Tears&quot; garden... Built in 1850 by some rich snob. Now an abandoned, overgrown mess. A perfect place for a murder.
 
 [[The fading target&#39;s photo.-&gt;Photo1]]
-[[Enough reading, time to act.-&gt;Garden1]]</tw-passagedata><tw-passagedata pid="71" name="Look around" tags="Need-Programming" position="2450,1075" size="100,100">(track: &quot;023_Clue1&quot;, &quot;play&quot;)
+[[Enough reading, time to act.-&gt;Garden1]]
+(track: &quot;011_NoteBook2&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="71" name="Look around" tags="Need-Programming" position="2450,1075" size="100,100">(track: &quot;023_Clue1&quot;, &quot;play&quot;)
 &lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Look%20around%20(clue%20flower).png?raw=true&quot;&gt;
@@ -575,7 +642,8 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 What the FUCK is that!?
 
 [[I bolt to the fountain.-&gt;Run to the fountain]]
-[(after:3s)[[[The face, It&#39;s... changing.-&gt;The face, It&#39;s... changing]]]]</tw-passagedata><tw-passagedata pid="80" name="Open the doll" tags="" position="2950,1025" size="100,100">&lt;/style&gt;
+[(after:3s)[[[The face, It&#39;s... changing.-&gt;The face, It&#39;s... changing]]]]
+(track: &quot;039_JumpScare2&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="80" name="Open the doll" tags="" position="2950,1025" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Open%20the%20doll.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -593,7 +661,8 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 Ineska Yazov. A sight for sore eyes, no doubt...
 
 [[The quickly written down notes of this place.-&gt;Location1]]
-[[Enough reading, time to act.-&gt;Garden1]]</tw-passagedata><tw-passagedata pid="83" name="Pick up the boat" tags="" position="925,2900" size="100,100">&lt;/style&gt;
+[[Enough reading, time to act.-&gt;Garden1]]
+(track: &quot;011_NoteBook2&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="83" name="Pick up the boat" tags="" position="925,2900" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Pick%20up%20the%20boat,%20Let%20it%20travel%20down%20the%20canal.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -645,13 +714,18 @@ Once I reach the fountain, I put my hands on my knees and take deep breaths, my 
 My head snaps up as I hear the sound of a twig cracking.
 
 [[I draw the gun and head towards the noise.-&gt;Draw the gun and move to the fountain]]
-[[I move towards the noise.-&gt;Cautiously move to the fountain]]</tw-passagedata><tw-passagedata pid="89" name="Run1" tags="" position="975,1500" size="100,100">&lt;/style&gt;
+[[I move towards the noise.-&gt;Cautiously move to the fountain]]
+(track: &quot;039_JumpScare2&quot;, &quot;stop&quot;)
+(track: &quot;045_TwigCracking&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="89" name="Run1" tags="" position="975,1500" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Run1.png?raw=true&quot;&gt;
 &lt;/div&gt;
 Something in my brain told me to run... as far away as I could from this place. I didn&#39;t even process it before my body was gunning it out of there.
 
-[[I keep running.-&gt;Run2]]</tw-passagedata><tw-passagedata pid="90" name="Run2" tags="ONEWAY" position="975,1650" size="100,100">&lt;/style&gt;
+[[I keep running.-&gt;Run2]]
+(track: &quot;020_Forest3&quot;, &quot;stop&quot;)
+(track: &quot;002_Run1&quot;, &quot;loop&quot;, true)
+(track: &quot;002_Run1&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="90" name="Run2" tags="ONEWAY" position="975,1650" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Run2,%20Run3.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -670,7 +744,8 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 &lt;/div&gt;
 I keep bashing my head against an unbreakable wall and it remains uncaring, unfeeling. I feel the world around me begin to chip, shake and crack under my feet.
 
-[[I frantically keep running.-&gt;Run5]]</tw-passagedata><tw-passagedata pid="93" name="Run5" tags="" position="600,1650" size="100,100">&lt;/style&gt;
+[[I frantically keep running.-&gt;Run5]]
+(track: &quot;033_Tension4&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="93" name="Run5" tags="" position="600,1650" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Run5.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -680,26 +755,34 @@ As if made of glass, the surrondings begin to web into shards of matter, the sou
 
 (align:&quot;=&gt;&lt;=&quot;)[&quot;The oldest and strongest emotion of mankind is fear, and the oldest and strongest kind of fear is fear of the unknown.&quot; -  H. P. Lovecraft]
 
-(align:&quot;=&gt;&lt;=&quot;)[[[Wake up, once more.-&gt;TitleScreen]]]</tw-passagedata><tw-passagedata pid="95" name="Secret1" tags="SECRET" position="2150,325" size="100,100">&lt;/style&gt;
+(align:&quot;=&gt;&lt;=&quot;)[[[Wake up, once more.-&gt;TitleScreen]]]
+(track: &quot;008_Ending1&quot;, &quot;play&quot;)
+(track: &quot;002_Run1&quot;, &quot;stop&quot;)
+(track: &quot;033_Tension4&quot;, &quot;stop&quot;)</tw-passagedata><tw-passagedata pid="95" name="Secret1" tags="SECRET" position="2150,325" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Secret1.png?raw=true&quot;&gt;
 &lt;/div&gt;
 Behind the bench, I see some perfectly baked piece of bread. It was squeaky clean, somehow immune to the all the bugs and grime this forest held. I might be a bad man... but I&#39;m no food waster. (set: $gotBread to true)
 
-[[I take the bread with me and get up.-&gt;ForestForward1]]</tw-passagedata><tw-passagedata pid="96" name="Shoot her and take the book" tags="ENDING" position="4375,1625" size="100,100">&lt;/style&gt;
+[[I take the bread with me and get up.-&gt;ForestForward1]]
+(track: &quot;010_Duda1&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="96" name="Shoot her and take the book" tags="ENDING" position="4375,1625" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Shoot%20her%20and%20take%20the%20book.png?raw=true&quot;&gt;
 &lt;/div&gt;
 The bullet finds it&#39;s mark, hitting her square in the heart... making her drop to the ground in a second. I feel the silence weighing down on me as I walk towards the corpse.
 
-[[I kneel down and rip the book out of her hands.-&gt;BADEnding1]]</tw-passagedata><tw-passagedata pid="97" name="Sit1" tags="" position="2150,475" size="100,100">&lt;/style&gt;
+[[I kneel down and rip the book out of her hands.-&gt;BADEnding1]]
+(track: &quot;032_GunShot&quot;, &quot;play&quot;)
+(track: &quot;054_Fountain&quot;, &quot;stop&quot;)
+(track: &quot;005_BeatingHeart1&quot;, &quot;stop&quot;)</tw-passagedata><tw-passagedata pid="97" name="Sit1" tags="" position="2150,475" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Sit1.png?raw=true&quot;&gt;
 &lt;/div&gt;
 I sit down on the bench, taking a deep sigh of relief. Despite being on a mission, a bit of R&amp;R wouldn&#39;t hurt. I take a cancer stick from my inner pocket and light it up, taking nice, drawn drags on it.
 
 [[Enough smoking, time to keep going.-&gt;ForestForward1]]
-(if: not $gotBread and (history: where its name contains &quot;Secret1&quot;)&#39;s length = 0)[(after:15s)[[[As I take in the view I find some... bread?-&gt;Secret1]]]]</tw-passagedata><tw-passagedata pid="98" name="Stairs1" tags="" position="2300,775" size="100,100">&lt;/style&gt;
+(if: not $gotBread)[(after:10s)[[[As I take in the view I find some... bread?-&gt;Secret1]]]]
+(track: &quot;017_Smoking&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="98" name="Stairs1" tags="" position="2300,775" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/ForestRight1,%20Back1,%20Stairs1.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -719,7 +802,8 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 &lt;/div&gt;
 There she is! Sitting by the fountain... This is my chance.
 
-[[Cock the gun and take aim]]</tw-passagedata><tw-passagedata pid="101" name="Take the left path" tags="" position="2575,925" size="100,100">&lt;/style&gt;
+[[Cock the gun and take aim]]
+</tw-passagedata><tw-passagedata pid="101" name="Take the left path" tags="" position="2575,925" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Take%20the%20left%20path.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -745,7 +829,8 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 &lt;/div&gt;
 The horrid face began twisting and turning, it&#39;s features deforming until it became beautiful and... hauntingly familiar. Do I know her? I feel like I should do...
 
-[[I gaze into her eyes.-&gt;Gaze into her eyes]]</tw-passagedata><tw-passagedata pid="105" name="TitleScreen" tags="" position="350,1500" size="100,100">&lt;/style&gt;
+[[I gaze into her eyes.-&gt;Gaze into her eyes]]
+(track: &quot;039_JumpScare2&quot;, &quot;stop&quot;)</tw-passagedata><tw-passagedata pid="105" name="TitleScreen" tags="" position="350,1500" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/logo_witheringtears.png?raw=true&quot; id=&quot;logo&quot;&gt;
 &lt;/div&gt;
@@ -762,7 +847,13 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 (set:$foundDollClue to false)
 (set: $clueCounter to 0)
 (track: &quot;001_Intro&quot;, &quot;loop&quot;, true)
-(track: &quot;001_Intro&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="106" name="Tree1" tags="" position="1375,2650" size="100,100">&lt;/style&gt;
+(track: &quot;001_Intro&quot;, &quot;play&quot;)
+(track: &quot;047_Ending5&quot;, &quot;stop&quot;)
+(track: &quot;046_Ending4&quot;, &quot;stop&quot;)
+(track: &quot;035_Ending3&quot;, &quot;stop&quot;)
+(track: &quot;028_Ending2&quot;, &quot;stop&quot;)
+(track: &quot;008_Ending1&quot;, &quot;stop&quot;)
+(track: &quot;044_GoodEnding1&quot;, &quot;stop&quot;)</tw-passagedata><tw-passagedata pid="106" name="Tree1" tags="" position="1375,2650" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/TREE1.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -770,13 +861,19 @@ I stop by the tree, looking up at it&#39;s sheer size. Massive roots burrow into
 
 (if:(history: where its name contains &quot;Check the small fountain&quot;)&#39;s length is 0)[[[Check the small shaded fountain.-&gt;Check the small fountain]]]
 [[Inspect the small water canal.-&gt;Check the canal]]
-[[Turn around and go back.-&gt;Garden2]]</tw-passagedata><tw-passagedata pid="107" name="Turn around and leave" tags="Need-Programming" position="1675,2650" size="100,100">&lt;/style&gt;
+[[Turn around and go back.-&gt;Garden2]]
+(track: &quot;018_Forest2&quot;, &quot;stop&quot;)
+(track: &quot;020_Forest3&quot;, &quot;loop&quot;, true)
+(track: &quot;020_Forest3&quot;, &quot;play&quot;)
+(track: &quot;053_Canal&quot;, &quot;stop&quot;)</tw-passagedata><tw-passagedata pid="107" name="Turn around and leave" tags="Need-Programming" position="1675,2650" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Gifs/Turn%20around%20and%20leave.gif?raw=true&quot;&gt;
 &lt;/div&gt;
 &quot;Pedro...&quot;
 
-[[Huh! Who&#39;s there?!-&gt;Who&#39;s there!]]</tw-passagedata><tw-passagedata pid="108" name="What&#39;s that...?" tags="Need-Programming ONEWAY" position="1650,1800" size="100,100">&lt;/style&gt;
+[[Huh! Who&#39;s there?!-&gt;Who&#39;s there!]]
+(track: &quot;054_Fountain&quot;, &quot;stop&quot;)
+(track: &quot;040_Ghost1&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="108" name="What&#39;s that...?" tags="Need-Programming ONEWAY" position="1650,1800" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Gifs/What&#39;s%20that..._.gif?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -785,13 +882,15 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 (live: 4s)[
 	(replace: ?text)[]
 	(stop:)
-]</tw-passagedata><tw-passagedata pid="109" name="Who&#39;s there!" tags="" position="1825,2650" size="100,100">&lt;/style&gt;
+]
+(track: &quot;039_JumpScare2&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="109" name="Who&#39;s there!" tags="" position="1825,2650" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Check%20the%20small%20fountain.png?raw=true&quot;&gt;
 &lt;/div&gt;
 I turn my head back to the fountain for a second and I see nothing. My eyes narrow and my fist clenches. Swear I heard something... must be sleep gnawing at me.
 
-[[I shake my head and go back.-&gt;Garden2]]</tw-passagedata><tw-passagedata pid="110" name="and walking..." tags="ONEWAY" position="2500,1300" size="100,100">&lt;/style&gt;
+[[I shake my head and go back.-&gt;Garden2]]
+(track: &quot;004_Breath2&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="110" name="and walking..." tags="ONEWAY" position="2500,1300" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/and%20walking....png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -810,13 +909,15 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 &lt;/div&gt;
 I bite my tongue and start going down the staircase. I don&#39;t have all the time in the world to find her. A few stairs shouldn&#39;t be the end of the world...
 
-[[I keep making my way down. -&gt;keep walking down]]</tw-passagedata><tw-passagedata pid="113" name="go down cautiously" tags="" position="2450,775" size="100,100">&lt;/style&gt;
+[[I keep making my way down. -&gt;keep walking down]]
+(track: &quot;019_Walk2&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="113" name="go down cautiously" tags="" position="2450,775" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Go%20down%20cautiously,%20go%20down.png?raw=true&quot;&gt;
 &lt;/div&gt;
 I take my time, slowly making my way down the staircase. The ground is too muddy to even try to go fast.
 
-[[I keep moving carefully.-&gt;keep moving carefully]]</tw-passagedata><tw-passagedata pid="114" name="have a look around" tags="" position="2450,925" size="100,100">&lt;/style&gt;
+[[I keep moving carefully.-&gt;keep moving carefully]]
+(track: &quot;019_Walk2&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="114" name="have a look around" tags="" position="2450,925" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/have%20a%20look%20around(1).png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -824,7 +925,8 @@ Moving towards the edge of the cliff, I can see a cross-shaped fountain below.
 As I plant my feet on the edge of the cliff, I can see the fountain more clearly. Looking down, I notice something tied to a small flower. Looks like a piece of paper.
 
 [[I carefully pickup the note and inspect it.-&gt;Look around]]
-[[Ignore it and keep moving.-&gt;keep moving carefully]]</tw-passagedata><tw-passagedata pid="115" name="investigate" tags="" position="2025,625" size="100,100">&lt;/style&gt;
+[[Ignore it and keep moving.-&gt;keep moving carefully]]
+(track: &quot;010_Duda1&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="115" name="investigate" tags="" position="2025,625" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Investigate.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -843,14 +945,18 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 &lt;/div&gt;
 I accelerate my pace down the stairs. Lady luck wasn&#39;t on my side as at the end of the stairs, my foot gives way. I bang my arm against the corner of the stair as I begin to roll down the steep woodland. A sharp pain hits my back as I&#39;m stopped by a tree. God... dammit.
 
-[[I shake my head and get up.-&gt;Get up and look around]]</tw-passagedata><tw-passagedata pid="118" name="risk walking down" tags="" position="2375,1300" size="100,100">&lt;/style&gt;
+[[I shake my head and get up.-&gt;Get up and look around]]
+(track: &quot;019_Walk2&quot;, &quot;stop&quot;)
+(track: &quot;025_Falling1&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="118" name="risk walking down" tags="" position="2375,1300" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/risk%20walking%20down.png?raw=true&quot;&gt;
 &lt;/div&gt;
 Well, I did fall quite a bit, I shouldn&#39;t be TOO far from the entrance. I resume walking down, this time carefully. The sky began to be swallowed whole by the foliage, plunging the world into subtle darkness.
  
 [[Keep walking down the forest-&gt;and walking...]]
-[[try to walk back up]]</tw-passagedata><tw-passagedata pid="119" name="try to walk back up" tags="" position="2225,1300" size="100,100">&lt;/style&gt;
+[[Try to walk back up-&gt;try to walk back up]]
+(track: &quot;019_Walk2&quot;, &quot;loop&quot;, true)
+(track: &quot;019_Walk2&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="119" name="try to walk back up" tags="" position="2225,1300" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/try%20to%20walk%20back%20up.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -862,7 +968,8 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 &lt;/div&gt;
 My steps became just like everything else... a mirror, a rythym of thuds, an insane cacophonous orchestra as I keep going down this loop of lunacy. But despite this madness...
 
-[[It felt good.]]</tw-passagedata><tw-passagedata pid="121" name="Must... keep... going... down." tags="" position="3000,1300" size="100,100">&lt;/style&gt;
+[[It felt good.]]
+(track: &quot;006_FaintMusic&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="121" name="Must... keep... going... down." tags="" position="3000,1300" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Must...%20keep...%20going...%20down.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -874,7 +981,8 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 &lt;/div&gt;
 My mind fractured on itself like broken glass and suddenly, the grimace on my face faded, a peaceful mania took over my body... It feels good, the world revolving itself like a wicked version of an ouroborus. Everything is alright here and a wave of calmness envelops me like a warm blanket. I&#39;m safe, I&#39;m happy...
 
-[[Must... keep... going... down.]]</tw-passagedata><tw-passagedata pid="123" name="Aim" tags="" position="3550,175" size="100,100">&lt;/style&gt;
+[[Must... keep... going... down.]]
+(track: &quot;029_Laughter&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="123" name="Aim" tags="" position="3550,175" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/DontShoot1,%20Aim.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -884,10 +992,11 @@ src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/
 
 (align:&quot;&lt;==&quot;)+(box:&quot;====XXXXX=&quot;)|text&gt;[[[I was &quot;Switchblade&quot; and I never missed.-&gt;Kill1]]]
 
-(live: 3s)[
+(live: 5s)[
 	(replace: ?text)[]
 	(stop:)
-]</tw-passagedata><tw-passagedata pid="124" name="GoodEnd1" tags="" position="4375,1800" size="100,100">&lt;/style&gt;
+]
+(track: &quot;005_BeatingHeart1&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="124" name="GoodEnd1" tags="" position="4375,1800" size="100,100">&lt;/style&gt;
 &lt;img
 src=&quot;https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/Good%20end%201.png?raw=true&quot;&gt;
 &lt;/div&gt;
@@ -933,7 +1042,8 @@ As I feel the cold steel on the side of my head, I begin to reflect on what I ha
 
 (align:&quot;=&gt;&lt;=&quot;)[“Most people are not just comfortable in their ignorance, but hostile to anyone who points it out.” -  Plato]
 
-(align:&quot;=&gt;&lt;=&quot;)[[[Wake up, once more.-&gt;TitleScreen]]]</tw-passagedata><tw-passagedata pid="132" name="Disclaimer" tags="" position="200,1500" size="100,100">(align:&quot;=&gt;&lt;=&quot;)[&#39;&#39;TRIGGER WARNING: THIS GAME GOES THROUGH TOPICS OF SUICIDE AND SELF HARM. PROCEED WITH CAUTION!&#39;&#39;]
+(align:&quot;=&gt;&lt;=&quot;)[[[Wake up, once more.-&gt;TitleScreen]]]
+(track: &quot;047_Ending5&quot;, &quot;play&quot;)</tw-passagedata><tw-passagedata pid="132" name="Disclaimer" tags="" position="200,1500" size="100,100">(align:&quot;=&gt;&lt;=&quot;)[&#39;&#39;TRIGGER WARNING: THIS GAME GOES THROUGH TOPICS OF SUICIDE AND SELF HARM. PROCEED WITH CAUTION!&#39;&#39;]
 
 (align:&quot;=&gt;&lt;=&quot;)[[Continue.-&gt;TitleScreen]]</tw-passagedata><tw-passagedata pid="133" name="hal.tracks" tags="" position="200,1375" size="100,100">001_Intro:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/001_Intro.mp3
 002_Run1:https://raw.githubusercontent.com/HugoFMRamos/NI_G04_WITHERINGTEARS/main/assets/sounds/002_Run1.wav

@@ -41,10 +41,11 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 
 (align:"<==")+(box:"====XXXXX=")|text>[[[I was "Switchblade" and I never missed.->Kill1]]]
 
-(live: 3s)[
+(live: 5s)[
 	(replace: ?text)[]
 	(stop:)
 ]
+(track: "005_BeatingHeart1", "play")
 
 
 :: BADEnding [ENDING] {"position":"4525,1475","size":"100,100"}
@@ -53,6 +54,7 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 (align:"=><=")[“Most people are not just comfortable in their ignorance, but hostile to anyone who points it out.” -  Plato]
 
 (align:"=><=")[[[Wake up, once more.->TitleScreen]]]
+(track: "047_Ending5", "play")
 
 
 :: BADEnding1 {"position":"4525,1625","size":"100,100"}
@@ -135,6 +137,7 @@ I tear the bread into crumbs and begin throwing it to the ducks. Some begin to s
 
 [[I look at a particular white duck.->Duck1]]
 [[Guess I did my good deed for the day.->Lake1]]
+(track: "049_Duck1", "play")
 
 
 :: Cautiously move to the fountain [Good-deed] {"position":"3025,2000","size":"100,100"}
@@ -145,6 +148,9 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 As I cautiously move toward the fountain, I notice the sun already beginning to set... The cold fingers of the night slowly coming up from the horizon. I don't have much time. I quickly scout the area, going towards some green bushes.
 
 [[I look around the bushes.->Move up behind the bushes]]
+(track: "054_Fountain", "loop", "true")
+(track: "054_Fountain", "play")
+(track: "037_Lake1", "stop")
 
 
 :: Check the canal {"position":"1225,2650","size":"100,100"}
@@ -155,6 +161,9 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 I walk towards the small canal. Calling it a canal is an overstatement. It is more of a sad little crack in the stone than anything. It seems to lead out of the garden. At least the water is clear.
 
 (if:$foundBoatClue is true)[[[Turn back->Tree1]]](else:)[[[I follow the canal upstream.->Take a closer look]]]
+(track: "020_Forest3", "stop")
+(track: "053_Canal", "loop", true)
+(track: "053_Canal", "play")
 
 
 :: Check the piece of paper [Need-Programming] {"position":"1275,1800","size":"100,100"}
@@ -177,6 +186,9 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 The fountain was a peaceful place, flora scattered everywhere. I squat down a look at the waters for a little bit. Taking a deep breath, I stand back up... Nothing to see here.
 
 [[I turn around to leave.->Turn around and leave]]
+(track: "020_Forest3", "stop")
+(track: "054_Canal", "loop", true)
+(track: "054_Fountain", "play")
 
 
 :: Check the tunnel {"position":"1900,1675","size":"100,100"}
@@ -188,6 +200,7 @@ One step after another I approach the tunnel. The iron bars had seen better days
 
 [[Maybe she's in there?->Get closer and look into the tunnel]]
 [[Nah... I don't think so.->Nah... I don't think so]]
+(track: "021_Tunnel1", "play")
 
 
 :: Choose to not shoot, but shoots anyway {"position":"3800,1500","size":"100,100"}
@@ -198,6 +211,7 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 Seriously? You think I am just going to stand here and play second fiddle? No, you must crazy or something. This time I chose.
 
 [[I let the gun ring out in the garden.->Shoot her and take the book]]
+(track: "005_BeatingHeart1", "stop")
 
 
 :: Close my eyes and focus {"position":"4075,1800","size":"100,100"}
@@ -220,7 +234,7 @@ Unholstering the gun, I see her eyes falling on me, widening, her hand quickly r
 [[I quickly, take aim and fire.->Shoot her and take the book]]
 (if: $clueCounter >= 4)[[[I don't shoot her.->Don't shoot her]]]
 (else:)[[[I don't shoot her.->Choose to not shoot, but shoots anyway]]]
-
+(track: "005_BeatingHeart1", "play")
 
 
 :: Disclaimer {"position":"200,1500","size":"100,100"}
@@ -238,6 +252,7 @@ Before I realize I was too slow, she takes out an old, worn book. Is that the bo
 
 [["B-But... I can't."->Lower the gun]]
 [["I'm s-sorry."->Shoot her and take the book]]
+(track: "005_BeatingHeart1", "stop")
 
 
 :: DontShoot1 [Good-deed] {"position":"3400,400","size":"100,100"}
@@ -258,6 +273,9 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 Damn it, the sun is setting, I'm almost out of time. I need to be careful, if it's the target, she could be armed.
 
 [[Take cover behind some bushes and scout the fountain]]
+(track: "054_Fountain", "loop", "true")
+(track: "054_Fountain", "play")
+(track: "037_Lake1", "stop")
 
 
 :: Drink some water from the lake {"position":"2475,2150","size":"100,100"}
@@ -269,6 +287,7 @@ I tear my gloves off and cup my hands into the water. As the cool water hit my l
 
 [[I get a closer look.->Look closer]]
 [[Leave->Lake beginning]]
+(track: "038_Bubbles", "play")
 
 
 :: Duck1 {"position":"2350,2400","size":"100,100"}
@@ -299,6 +318,9 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 The duck looks back at me. It's eyes seem to stare right through my very soul. I can't help but approach the duck, as if it was calling for my name.
 
 [[One step, another, then another.->Duck4]]
+(track: "037_Lake1", "stop")
+(track: "049_Duck1", "stop")
+(track: "050_Duck2", "play")
 
 
 :: Duck4 {"position":"2600,2525","size":"100,100"}
@@ -314,11 +336,13 @@ When I get close to the duck, I kneel down and begin petting it's head. Its' fea
 :: Duck5 {"position":"2475,2525","size":"100,100"}
 </style>
 <img
-src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/duck4.png?raw=true">
+src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/images/duck%205.png?raw=true">
 </div>
 I feel the world growing bigger... me becoming smaller. My clothes swallow me as I keep looking at the duck. I feel my muscles and bones stretch and deform, my skin growing quills until...
 
 [[Quack.->Duck6]]
+(track: "050_Duck2", "stop")
+(track: "051_Duck3", "play")
 
 
 :: Duck6 {"position":"2350,2525","size":"100,100"}
@@ -337,6 +361,8 @@ Quack, quack, quack...
 (align:"=><=")["Don't quack like a duck, soar like an eagle!" -  Ken Blanchard]
 
 (align:"=><=")[[[Wake up, once more.->TitleScreen]]]
+(track: "052_Duck4", "play")
+(track: "051_Duck3", "stop")
 
 
 :: Fail1 {"position":"3250,300","size":"100,100"}
@@ -361,6 +387,9 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 [[Keep going forward.->ForestForward1]]
 [[Take the right.->ForestRight1]]
 [[Go back.->Garden2]]
+(track: "018_Forest2", "stop")
+(track: "026_Forest4", "loop", true)
+(track: "026_Forest4", "play")
 
 
 :: Forest2 {"position":"2650,350","size":"100,100"}
@@ -372,6 +401,7 @@ Despite the thickening woodland, something in me is telling me to keep going. Mo
 
 [[I push my doubts aside and keep pushing.->Forest3]]
 [[I shake my head and go back.->ForestRight1]]
+(track: "014_Bushes1", "play")
 
 
 :: Forest3 {"position":"2800,350","size":"100,100"}
@@ -432,6 +462,7 @@ I ain't got time to let the garden play tricks on me. I got a target to take car
 
 [[Go to the big tree instead.->Tree1]]
 [[Go to the lake.->Lake1]]
+(track: "003_Breath1", "play")
 
 
 :: GET THE HELL OUT {"position":"1525,1800","size":"100,100"}
@@ -442,6 +473,7 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 Just as I'm about to haul ass, the creature's hand opens, revealling a letter. I scratch my head and my brow furrows. This place is more insane than Alice in Wonderland...
 
 [[I reach my hand out and take it...->Take the letter]]
+(track: "039_JumpScare2", "stop")
 
 
 :: Garden1 {"position":"1775,1425","size":"100,100"}
@@ -465,6 +497,12 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 [[The massive tree looming over me.->Tree1]]
 [[The crystal clear lake.->Lake1]]
 [[The tight, interwoven paths of the forest.->Forest1]]
+(track: "020_Forest3", "stop")
+(track: "026_Forest4", "stop")
+(track: "021_Tunnel1", "stop")
+(track: "037_Lake1", "stop")
+(track: "018_Forest2", "loop", true)
+(track: "018_Forest2", "play")
 
 
 :: Gaze into her beautiful eyes {"position":"3925,1800","size":"100,100"}
@@ -475,6 +513,9 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 The gun falls off my hands with a soft thud as it landed on the grass. Her soft voice breaks the tense silence between us- "Pedro... Is that, finally, you? Do you remember me?" -As I hear her words, my brain feels like it wants to crawl out of my skull.
 
 [[I close my eyes and take a deep breath.->Close my eyes and focus]]
+(track: "048_GoodEnding2", "loop", "true")
+(track: "048_GoodEnding2", "play")
+(track: "054_Fountain", "stop")
 
 
 :: Gaze into her eyes [Good-deed] {"position":"2825,2150","size":"100,100"}
@@ -486,6 +527,7 @@ And just like that, she had dissapeared. I blinked a few times and shook my head
 
 [[I stand back up.->Lake beginning]] 
 [[I walk to the bench to unwind.->BenchNoBread]]
+
 
 
 :: Get closer and look into the tunnel {"position":"1900,1800","size":"100,100"}
@@ -507,6 +549,7 @@ I let out a pained grunt as I get myself back on my feet, a dull ache on my arm 
 
 [[I push that thought aside and go back up.->try to walk back up]]
 [[I take a risk and keep walking down.->risk walking down]]
+(track: "027_Grunt1", "play")
 
 
 :: Go to the lake {"position":"2475,2000","size":"100,100"}
@@ -646,6 +689,8 @@ I'm walking down a path on the street... and at the end of that street, is a gar
 
 [[Continue.->Intro2]]
 (track: "001_Intro", "stop")
+(track: "020_Forest3", "loop", true)
+(track: "020_Forest3", "play")
 
 
 :: Intro2 {"position":"975,1350","size":"100,100"}
@@ -667,6 +712,7 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 While I look around, I pull out my notebook, the silent assistant of death, to remind myself of my mission.
 
 [[Continue.->Intro4]]
+((track: "009_NoteBook1", "play")
 
 
 :: Intro3.1 {"position":"1125,1650","size":"100,100"}
@@ -677,6 +723,10 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 I shake my head. Must have been the restless night gnawing at my heels. I walk back to the gate.
 
 [[Continue.->Intro3]]
+(track: "003_Breath1", "play")
+(track: "020_Forest3", "loop", true)
+(track: "020_Forest3", "play")
+(track: "002_Run1", "stop")
 
 
 :: Intro4 {"position":"1275,1350","size":"100,100"}
@@ -689,6 +739,7 @@ The worn pages told me everything that I needed to know. What should I read firs
 [[The fading target's photo.->Photo1]]
 [[The quickly written down notes of this place.->Location1]]
 [[No time for reading, time to act.->Garden1]]
+(track: "009_NoteBook1", "play")
 
 
 :: It felt good. {"position":"2875,1300","size":"100,100"}
@@ -699,6 +750,7 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 My mind fractured on itself like broken glass and suddenly, the grimace on my face faded, a peaceful mania took over my body... It feels good, the world revolving itself like a wicked version of an ouroborus. Everything is alright here and a wave of calmness envelops me like a warm blanket. I'm safe, I'm happy...
 
 [[Must... keep... going... down.]]
+(track: "029_Laughter", "play")
 
 
 :: Keep observing {"position":"3325,2000","size":"100,100"}
@@ -717,6 +769,10 @@ As I keep looking, her eyes land on me. I freeze for a second, my hand clenching
 (align:"=><=")["Delay is the deadliest form of denial." -  C. Northcote Parkinson]
 
 (align:"=><=")[[[Wake up, once more.->TitleScreen]]]
+(track: "019_Walk2", "stop")
+(track: "006_FaintMusic", "stop")
+(track: "029_Laughter", "stop")
+(track: "046_Ending4", "play")
 
 
 :: Keep on walking down1 {"position":"2750,1300","size":"100,100"}
@@ -727,6 +783,7 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 My steps became just like everything else... a mirror, a rythym of thuds, an insane cacophonous orchestra as I keep going down this loop of lunacy. But despite this madness...
 
 [[It felt good.]]
+(track: "006_FaintMusic", "play")
 
 
 :: Keep walking down {"position":"2625,1300","size":"100,100"}
@@ -751,6 +808,8 @@ I pull the trigger and the pistol roars to life, disturbing the quiet of the woo
 I lower the gun. The life on her eyes was sucked dry.
 
 [[My job was done.->Kill2]]
+(track: "032_GunShot", "play")
+(track: "005_BeatingHeart1", "stop")
 
 
 :: Kill2 {"position":"3825,175","size":"100,100"}
@@ -781,6 +840,7 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 My lungs are burning, my body is a raging inferno, almost as if I had inhaled hot coals. My coughing grows more forceful as I fall to my knees, feeling the metallic tang of blood seeping out of my mouth.
 
 [[My strength is leeched away from me.->Kill5]]
+(track: "034_Cough", "play")
 
 
 :: Kill5 {"position":"3825,50","size":"100,100"}
@@ -801,6 +861,8 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 This was it... After all these years of being a killer, karma finally caught up to me. This was my penance, a slow... agonizing death. Hell was burning me from the inside out...
 
 [[...and soon enough, it took me there.->KillENDING]]
+(track: "036_Fire", "play")
+
 
 
 :: KillENDING [ENDING] {"position":"3575,50","size":"100,100"}
@@ -809,6 +871,8 @@ This was it... After all these years of being a killer, karma finally caught up 
 (align:"=><=")["It is not death that a man should fear, but he should fear never beginning to live." -  Marcus Aurelius]
 
 (align:"=><=")[[[Wake up, once more.->TitleScreen]]]
+(track: "035_Ending3", "play")
+(track: "026_Forest4", "stop")
 
 
 :: Kiss her [True-Ending ENDING] {"position":"4675,1800","size":"100,100"}
@@ -817,6 +881,8 @@ This was it... After all these years of being a killer, karma finally caught up 
 (align:"=><=")["The struggle itself towards the heights is enough to fill a man's heart. One must imagine Sisyphus happy." -  Albert Camus]
 
 (align:"=><=")[[[You may finally rest, Pedro.->TitleScreen]]]
+(track: "044_GoodEnding1", "play")
+(track: "048_GoodEnding2", "stop")
 
 
 :: Lake beginning {"position":"2825,1900","size":"100,100"}
@@ -828,6 +894,7 @@ I bring my head up, taking a look around the still lake until something catches 
 
 [[I draw the gun and head towards the fountain.->Draw the gun and move to the fountain]]
 [[I move towards the fountain.->Cautiously move to the fountain]]
+(track: "010_Duda1", "play")
 
 
 :: Lake1 {"position":"2225,2150","size":"100,100"}
@@ -840,6 +907,9 @@ The lake, It's a beautiful place, a total contrast of what was going to happen h
 (if:$gotBread)[[[Give some bread to the ducks->Bread1]]]
 [[Drink some water from the lake.->Drink some water from the lake]] 
 [[Sit down on the tree stump.->BenchNoBread]]
+(track: "037_Lake1", "loop", true)
+(track: "037_Lake1", "play")
+(track: "018_Forest2", "stop")
 
 
 :: Leave {"position":"3100,300","size":"100,100"}
@@ -881,6 +951,7 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 
 [[The fading target's photo.->Photo1]]
 [[Enough reading, time to act.->Garden1]]
+(track: "011_NoteBook2", "play")
 
 
 :: Look around [Need-Programming] {"position":"2450,1075","size":"100,100"}
@@ -988,6 +1059,7 @@ What the FUCK is that!?
 
 [[I bolt to the fountain.->Run to the fountain]]
 [(after:3s)[[[The face, It's... changing.->The face, It's... changing]]]]
+(track: "039_JumpScare2", "play")
 
 
 :: Open the doll {"position":"2950,1025","size":"100,100"}
@@ -1018,6 +1090,7 @@ Ineska Yazov. A sight for sore eyes, no doubt...
 
 [[The quickly written down notes of this place.->Location1]]
 [[Enough reading, time to act.->Garden1]]
+(track: "011_NoteBook2", "play")
 
 
 :: Pick up the boat {"position":"925,2900","size":"100,100"}
@@ -1094,6 +1167,8 @@ My head snaps up as I hear the sound of a twig cracking.
 
 [[I draw the gun and head towards the noise.->Draw the gun and move to the fountain]]
 [[I move towards the noise.->Cautiously move to the fountain]]
+(track: "039_JumpScare2", "stop")
+(track: "045_TwigCracking", "play")
 
 
 :: Run1 {"position":"975,1500","size":"100,100"}
@@ -1104,6 +1179,9 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 Something in my brain told me to run... as far away as I could from this place. I didn't even process it before my body was gunning it out of there.
 
 [[I keep running.->Run2]]
+(track: "020_Forest3", "stop")
+(track: "002_Run1", "loop", true)
+(track: "002_Run1", "play")
 
 
 :: Run2 [ONEWAY] {"position":"975,1650","size":"100,100"}
@@ -1135,6 +1213,7 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 I keep bashing my head against an unbreakable wall and it remains uncaring, unfeeling. I feel the world around me begin to chip, shake and crack under my feet.
 
 [[I frantically keep running.->Run5]]
+(track: "033_Tension4", "play")
 
 
 :: Run5 {"position":"600,1650","size":"100,100"}
@@ -1153,6 +1232,9 @@ As if made of glass, the surrondings begin to web into shards of matter, the sou
 (align:"=><=")["The oldest and strongest emotion of mankind is fear, and the oldest and strongest kind of fear is fear of the unknown." -  H. P. Lovecraft]
 
 (align:"=><=")[[[Wake up, once more.->TitleScreen]]]
+(track: "008_Ending1", "play")
+(track: "002_Run1", "stop")
+(track: "033_Tension4", "stop")
 
 
 :: Secret1 [SECRET] {"position":"2150,325","size":"100,100"}
@@ -1163,6 +1245,7 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 Behind the bench, I see some perfectly baked piece of bread. It was squeaky clean, somehow immune to the all the bugs and grime this forest held. I might be a bad man... but I'm no food waster. (set: $gotBread to true)
 
 [[I take the bread with me and get up.->ForestForward1]]
+(track: "010_Duda1", "play")
 
 
 :: Shoot her and take the book [ENDING] {"position":"4375,1625","size":"100,100"}
@@ -1173,6 +1256,9 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 The bullet finds it's mark, hitting her square in the heart... making her drop to the ground in a second. I feel the silence weighing down on me as I walk towards the corpse.
 
 [[I kneel down and rip the book out of her hands.->BADEnding1]]
+(track: "032_GunShot", "play")
+(track: "054_Fountain", "stop")
+(track: "005_BeatingHeart1", "stop")
 
 
 :: Sit1 {"position":"2150,475","size":"100,100"}
@@ -1183,7 +1269,8 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 I sit down on the bench, taking a deep sigh of relief. Despite being on a mission, a bit of R&R wouldn't hurt. I take a cancer stick from my inner pocket and light it up, taking nice, drawn drags on it.
 
 [[Enough smoking, time to keep going.->ForestForward1]]
-(if: not $gotBread and (history: where its name contains "Secret1")'s length = 0)[(after:15s)[[[As I take in the view I find some... bread?->Secret1]]]]
+(if: not $gotBread)[(after:10s)[[[As I take in the view I find some... bread?->Secret1]]]]
+(track: "017_Smoking", "play")
 
 
 :: Stairs1 {"position":"2300,775","size":"100,100"}
@@ -1216,6 +1303,7 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 There she is! Sitting by the fountain... This is my chance.
 
 [[Cock the gun and take aim]]
+
 
 
 :: Take the left path {"position":"2575,925","size":"100,100"}
@@ -1258,6 +1346,7 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 The horrid face began twisting and turning, it's features deforming until it became beautiful and... hauntingly familiar. Do I know her? I feel like I should do...
 
 [[I gaze into her eyes.->Gaze into her eyes]]
+(track: "039_JumpScare2", "stop")
 
 
 :: TitleScreen {"position":"350,1500","size":"100,100"}
@@ -1279,6 +1368,12 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 (set: $clueCounter to 0)
 (track: "001_Intro", "loop", true)
 (track: "001_Intro", "play")
+(track: "047_Ending5", "stop")
+(track: "046_Ending4", "stop")
+(track: "035_Ending3", "stop")
+(track: "028_Ending2", "stop")
+(track: "008_Ending1", "stop")
+(track: "044_GoodEnding1", "stop")
 
 
 :: Tree1 {"position":"1375,2650","size":"100,100"}
@@ -1291,6 +1386,10 @@ I stop by the tree, looking up at it's sheer size. Massive roots burrow into the
 (if:(history: where its name contains "Check the small fountain")'s length is 0)[[[Check the small shaded fountain.->Check the small fountain]]]
 [[Inspect the small water canal.->Check the canal]]
 [[Turn around and go back.->Garden2]]
+(track: "018_Forest2", "stop")
+(track: "020_Forest3", "loop", true)
+(track: "020_Forest3", "play")
+(track: "053_Canal", "stop")
 
 
 :: Turn around and leave [Need-Programming] {"position":"1675,2650","size":"100,100"}
@@ -1301,6 +1400,8 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 "Pedro..."
 
 [[Huh! Who's there?!->Who's there!]]
+(track: "054_Fountain", "stop")
+(track: "040_Ghost1", "play")
 
 
 :: What's that...? [Need-Programming ONEWAY] {"position":"1650,1800","size":"100,100"}
@@ -1314,6 +1415,7 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 	(replace: ?text)[]
 	(stop:)
 ]
+(track: "039_JumpScare2", "play")
 
 
 :: Who's there! {"position":"1825,2650","size":"100,100"}
@@ -1324,6 +1426,7 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 I turn my head back to the fountain for a second and I see nothing. My eyes narrow and my fist clenches. Swear I heard something... must be sleep gnawing at me.
 
 [[I shake my head and go back.->Garden2]]
+(track: "004_Breath2", "play")
 
 
 :: and walking... [ONEWAY] {"position":"2500,1300","size":"100,100"}
@@ -1355,6 +1458,7 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 I bite my tongue and start going down the staircase. I don't have all the time in the world to find her. A few stairs shouldn't be the end of the world...
 
 [[I keep making my way down. ->keep walking down]]
+(track: "019_Walk2", "play")
 
 
 :: go down cautiously {"position":"2450,775","size":"100,100"}
@@ -1365,6 +1469,7 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 I take my time, slowly making my way down the staircase. The ground is too muddy to even try to go fast.
 
 [[I keep moving carefully.->keep moving carefully]]
+(track: "019_Walk2", "play")
 
 
 :: hal.tracks {"position":"200,1375","size":"100,100"}
@@ -1434,6 +1539,7 @@ As I plant my feet on the edge of the cliff, I can see the fountain more clearly
 
 [[I carefully pickup the note and inspect it.->Look around]]
 [[Ignore it and keep moving.->keep moving carefully]]
+(track: "010_Duda1", "play")
 
 
 :: investigate {"position":"2025,625","size":"100,100"}
@@ -1465,6 +1571,8 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 I accelerate my pace down the stairs. Lady luck wasn't on my side as at the end of the stairs, my foot gives way. I bang my arm against the corner of the stair as I begin to roll down the steep woodland. A sharp pain hits my back as I'm stopped by a tree. God... dammit.
 
 [[I shake my head and get up.->Get up and look around]]
+(track: "019_Walk2", "stop")
+(track: "025_Falling1", "play")
 
 
 :: risk walking down {"position":"2375,1300","size":"100,100"}
@@ -1475,7 +1583,9 @@ src="https://github.com/HugoFMRamos/NI_G04_WITHERINGTEARS/blob/main/assets/image
 Well, I did fall quite a bit, I shouldn't be TOO far from the entrance. I resume walking down, this time carefully. The sky began to be swallowed whole by the foliage, plunging the world into subtle darkness.
  
 [[Keep walking down the forest->and walking...]]
-[[try to walk back up]]
+[[Try to walk back up->try to walk back up]]
+(track: "019_Walk2", "loop", true)
+(track: "019_Walk2", "play")
 
 
 :: try to walk back up {"position":"2225,1300","size":"100,100"}
