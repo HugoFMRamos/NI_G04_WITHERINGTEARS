@@ -14,4 +14,4 @@ As the programmer and story writer, I was responsible for implementing gameplay 
 
 - Engine/Tool: Twine
 - Languages: HTML, CSS, JavaScript
-- Development type: [Individual / Team project]
+- Development type: Team project
